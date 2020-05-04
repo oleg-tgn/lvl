@@ -1,0 +1,108 @@
+$mobile: "(max-width: 767.98px)"
+$tablet: "(min-width: 768px) and (max-width: 991.98px)"
+$desktop: "(min-width: 992px)"
+
+*
+  margin: 0
+  padding: 0
+
+body
+  background: #111419  
+
+section, div, li
+  box-sizing: border-box
+
+img 
+  max-width: 100%
+
+body 
+  position: relative
+  
+.container
+  padding: 0 20px 0 110px;
+
+  @media #{$tablet}
+    padding: 0 20px 0 80px;
+
+  @media #{$mobile}
+    padding: 0 10px 0 45px;
+
+.header-temp 
+  background: #181b20;
+  border-bottom: 1px solid #1f2227
+  width: 100%;
+  height: 100px;
+  box-sizing: border-box
+  
+  @media #{$tablet}
+    height: 70px;
+
+  @media #{$mobile}
+    height: 40px;
+
+.aside-temp
+  background: #181b20
+  position: absolute
+  top: 100px
+  left: 0
+  bottom: 0
+  width: 90px
+  border-right: 1px solid #1f2227
+  min-height: calc(100vh - 100px)
+
+  @media #{$tablet}
+    top: 70px
+    width: 60px
+    min-height: calc(100vh - 70px)
+
+  @media #{$mobile}
+    top: 40px
+    width: 35px
+    min-height: calc(100vh - 40px)
+
+.tooltip
+  position: relative
+  display: inline-block
+  font-size: 0
+  cursor: pointer
+
+  @media #{$mobile}
+    margin: 0 10px
+
+  &:hover .tooltiptext 
+    visibility: visible
+
+  .tooltip
+    margin: 0
+    
+  .tooltiptext 
+    visibility: hidden
+    background-color: #000000
+    color: #fff
+    text-align: center
+    padding: 5px 0
+    border-radius: 12px
+    position: absolute
+    z-index: 1
+    text-decoration: none
+    font-family: Arial
+    font-size: 12px
+    font-weight: 400
+    width: 100px
+    top: 19px
+    left: 50%
+    transform: translateX(-50%)
+
+    @media #{$mobile}
+      width: 85px
+      font-size: 10px
+
+    &::after 
+      content: ""
+      position: absolute
+      bottom: 100%
+      left: 50%
+      transform: translateX(-50%)
+      border-width: 5px
+      border-style: solid
+      border-color: transparent transparent #000000 transparent

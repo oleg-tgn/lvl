@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!--Custom Range-->
+    <!--Plugin CSS file with desired skin-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css"/>
+    <!--jQuery-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!--Plugin JavaScript file-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>
+    <!--End Custom Scrollbar-->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+
+    <title>Search Template</title>
+
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/search.css">
+</head>
+<body>
+    <header class="header-temp"></header>
+    <div class="container">
+        <div class="aside-temp"></div>
+        <div class="search-players-wrapper">
+            <div class="search-bar">
+            <form action="">
+                <div class="search-form__row js-toggle">
+                    <label for="player_rating" class="search-form__label toggle-title js-toggle-title">Рейтинг</label>
+                    <div class="toggle-body js-toggle-body">
+                        <input type="text" id="player_rating" name="player_rating" value="" />
+                    </div>
+                </div><!--.search-form__row-->
+                <div class="search-form__row js-toggle">
+                    <label for="player_rating" class="search-form__label toggle-title js-toggle-title">Роль</label>
+                    <div class="toggle-body js-toggle-body">
+                    <div class="checkbox-wrap">
+                        <label class="custom-checkbox-circle">
+                            <input type="checkbox" name="player_role" value="Снайпер">
+                            <span>Снайпер</span>
+                        </label>
+                        <label class="custom-checkbox-circle">
+                            <input type="checkbox" name="player_role" value="Поддержка">
+                            <span>Поддержка</span>
+                        </label>
+                        <label class="custom-checkbox-circle">
+                            <input type="checkbox" name="player_role" value="Энтри фрагер">
+                            <span>Энтри фрагер</span>
+                        </label>
+                        <label class="custom-checkbox-circle">
+                            <input type="checkbox" name="player_role" value="Люркер">
+                            <span>Люркер</span>
+                        </label>
+                        <label class="custom-checkbox-circle">
+                            <input type="checkbox" name="player_role" value="Капитан">
+                            <span>Капитан</span>
+                        </label>
+                        <label class="custom-checkbox-circle">
+                            <input type="checkbox" name="player_role" value="Тренер">
+                            <span>Тренер</span>
+                        </label>
+                        <label class="custom-checkbox-circle">
+                            <input type="checkbox" name="player_role" value="Менеджер">
+                            <span>Менеджер</span>
+                        </label>
+                        <label class="custom-checkbox-circle">
+                            <input type="checkbox" name="player_role" value="Аналитик">
+                            <span>Аналитик</span>
+                        </label>
+                    </div>
+                    </div>
+                </div><!--.search-form__row-->
+                <div class="search-form__row js-toggle">
+                    <label for="player_rating" class="search-form__label toggle-title js-toggle-title">Количество часов в игре</label>
+                    <div class="toggle-body js-toggle-body">
+                        <input type="text" id="player_hours" name="player_hours" value="" />
+                    </div>
+                </div><!--.search-form__row-->
+                <div class="search-form__row js-toggle">
+                    <label for="player_rating" class="search-form__label toggle-title js-toggle-title">Роль</label>
+                    <div class="toggle-body js-toggle-body">
+                        <div class="checkbox-images-wrap">
+                            <label class="custom-checkbox-image">
+                                <input type="checkbox" name="player_rang" value="rang-1">
+                                <span><img src="images/rangs/rang-1.jpg"></span>
+                            </label>
+                            <label class="custom-checkbox-image">
+                                <input type="checkbox" name="player_rang" value="rang-2">
+                                <span><img src="images/rangs/rang-2.jpg"></span>
+                            </label>
+                            <label class="custom-checkbox-image">
+                                <input type="checkbox" name="player_rang" value="rang-3">
+                                <span><img src="images/rangs/rang-3.jpg"></span>
+                            </label>
+                            <label class="custom-checkbox-image">
+                                <input type="checkbox" name="player_rang" value="rang-4">
+                                <span><img src="images/rangs/rang-4.jpg"></span>
+                            </label>
+                            <label class="custom-checkbox-image">
+                                <input type="checkbox" name="player_rang" value="rang-5">
+                                <span><img src="images/rangs/rang-5.jpg"></span>
+                            </label>
+                            <label class="custom-checkbox-image">
+                                <input type="checkbox" name="player_rang" value="rang-6">
+                                <span><img src="images/rangs/rang-6.jpg"></span>
+                            </label>
+                            <label class="custom-checkbox-image">
+                                <input type="checkbox" name="player_rang" value="rang-7">
+                                <span><img src="images/rangs/rang-7.jpg"></span>
+                            </label>
+                            <label class="custom-checkbox-image">
+                                <input type="checkbox" name="player_rang" value="rang-8">
+                                <span><img src="images/rangs/rang-8.jpg"></span>
+                            </label>
+                            <label class="custom-checkbox-image">
+                                <input type="checkbox" name="player_rang" value="rang-9">
+                                <span><img src="images/rangs/rang-9.jpg"></span>
+                            </label>
+                            <label class="custom-checkbox-image">
+                                <input type="checkbox" name="player_rang" value="rang-10">
+                                <span><img src="images/rangs/rang-10.jpg"></span>
+                            </label>
+                            <label class="custom-checkbox-image">
+                                <input type="checkbox" name="player_rang" value="rang-11">
+                                <span><img src="images/rangs/rang-11.jpg"></span>
+                            </label>
+                            <label class="custom-checkbox-image">
+                                <input type="checkbox" name="player_rang" value="rang-12">
+                                <span><img src="images/rangs/rang-12.jpg"></span>
+                            </label>
+                            <label class="custom-checkbox-image">
+                                <input type="checkbox" name="player_rang" value="rang-13">
+                                <span><img src="images/rangs/rang-13.jpg"></span>
+                            </label>
+                            <label class="custom-checkbox-image">
+                                <input type="checkbox" name="player_rang" value="rang-14">
+                                <span><img src="images/rangs/rang-14.jpg"></span>
+                            </label>
+                            <label class="custom-checkbox-image">
+                                <input type="checkbox" name="player_rang" value="rang-15">
+                                <span><img src="images/rangs/rang-15.jpg"></span>
+                            </label>
+                            <label class="custom-checkbox-image">
+                                <input type="checkbox" name="player_rang" value="rang-16">
+                                <span><img src="images/rangs/rang-16.jpg"></span>
+                            </label>
+                            <label class="custom-checkbox-image">
+                                <input type="checkbox" name="player_rang" value="rang-17">
+                                <span><img src="images/rangs/rang-17.jpg"></span>
+                            </label>
+                            <label class="custom-checkbox-image">
+                                <input type="checkbox" name="player_rang" value="rang-18">
+                                <span><img src="images/rangs/rang-18.jpg"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="search-form__rules">
+                    <label class="custom-checkbox-circle">
+                        <input type="checkbox" name="player_online" value="true">
+                        <span>Искать только игроков онлайн</span>
+                    </label>
+                </div>
+                <div class="search-form__rules">
+                    <button class="search-form__button">Найти</button>
+
+                    <button class="search-form__clear js-reset-form" type="reset">Сбросить</button>
+                </div>
+            </form>
+            </div><!--.search-bar-->
+            <div class="search-results">
+            <div class="players-table">
+                <div class="players-table__row players-table__row_header">
+                    <div class="players-table__col players-table__nick">
+                        Игрок
+                    </div>
+                    <div class="toggle-body">
+                        <div class="players-table__data">
+                            <div class="players-table__col">
+                                Рейтинг
+                            </div>
+                            <div class="players-table__col">
+                                Матчей
+                            </div>
+                            <div class="players-table__col">
+                                Побед
+                            </div>
+                            <div class="players-table__col">
+                                У/С
+                            </div>
+                            <div class="players-table__col">
+                                MVP
+                            </div>
+                            <div class="players-table__col players-table__col_role-wrap">
+                                Роли
+                            </div>
+                            <div class="players-table__col players-table__col_like">
+                                Симпатия
+                            </div>     
+                            <div class="players-table__col players-table__col_friend">
+                                <a href="#ex1" rel="modal:open" class="players-table__add-friend players-table__add-friend_title js-open-modal">Подать заявку</a>
+                            </div>                       
+                        </div><!--players-table__data-->
+                    </div>
+                    <div class="players-table__col players-table__col_friend only-mobile">
+                        <a href="#ex1" rel="modal:open" class="players-table__add-friend players-table__add-friend_title js-open-modal">Подать заявку</a>
+                    </div>
+                </div>
+                <div class="players-table__row js-toggle">
+                    <div class="players-table__col players-table__nick toggle-title js-toggle-title">
+                        <img src="images/avatars/ava1.png" alt="" class="players-table__ava">
+                        <span>Rosario=DD #CS.MONEY</span>
+                    </div>
+                    <div class="toggle-body js-toggle-body">
+                        <div class="players-table__data">
+                            <div class="players-table__col">
+                                <span class="only-mobile">Рейтинг:</span> 
+                                <span class="players-table__rating">70.45</span>
+                            </div>
+                            <div class="players-table__col">
+                                <span class="only-mobile">Матчей:</span> 123
+                            </div>
+                            <div class="players-table__col">
+                                <span class="only-mobile">Побед:</span> 72%
+                            </div>
+                            <div class="players-table__col">
+                                <span class="only-mobile">У/С:</span> 1.7
+                            </div>
+                            <div class="players-table__col">
+                                <span class="only-mobile">MVP:</span> 44.5
+                            </div>
+                            <div class="players-table__col players-table__col_role-wrap">
+                                <span class="only-mobile">Роли:</span> 
+                                <span class="players-table__role">Поддержка</span>    
+                                <span class="players-table__role">Нападающий</span>                                
+                                <div class="tooltip">
+                                    <span class="players-table__role">+2</span>
+                                    <span class="tooltiptext">
+                                        Капитан
+                                        Менеджер
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="players-table__col players-table__col_like">
+                                <span class="only-mobile">Симпатия:</span> 
+                                <span class="players-table__like"><img src="images/icons/like.png"> 21</span>
+                                <span class="players-table__like"><img src="images/icons/dislike.png"> 7</span>
+                            </div>
+                            <div class="players-table__col players-table__col_friend"> 
+                                <a href="#" class="players-table__add-friend">Добавить в друзья</a>  
+                            </div>
+                        </div><!--players-table__data-->
+                    </div><!--toggle-body js-toggle-body-->
+                </div><!--players-table__row js-toggle-->
+
+                <!--dublicate-->
+                <div class="players-table__row js-toggle">
+                    <div class="players-table__col players-table__nick toggle-title js-toggle-title">
+                        <img src="images/avatars/ava1.png" alt="" class="players-table__ava">
+                        <span>Rosario=DD #CS.MONEY</span>
+                    </div>
+                    <div class="toggle-body js-toggle-body">
+                        <div class="players-table__data">
+                            <div class="players-table__col">
+                                <span class="only-mobile">Рейтинг:</span> 
+                                <span class="players-table__rating">70.45</span>
+                            </div>
+                            <div class="players-table__col">
+                                <span class="only-mobile">Матчей:</span> 123
+                            </div>
+                            <div class="players-table__col">
+                                <span class="only-mobile">Побед:</span> 72%
+                            </div>
+                            <div class="players-table__col">
+                                <span class="only-mobile">У/С:</span> 1.7
+                            </div>
+                            <div class="players-table__col">
+                                <span class="only-mobile">MVP:</span> 44.5
+                            </div>
+                            <div class="players-table__col players-table__col_role-wrap">
+                                <span class="only-mobile">Роли:</span> 
+                                <span class="players-table__role">Поддержка</span>    
+                                <span class="players-table__role">Нападающий</span>
+                                <div class="tooltip">
+                                    <span class="players-table__role">+2</span>
+                                    <span class="tooltiptext">
+                                        Капитан
+                                        Менеджер
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="players-table__col players-table__col_like">
+                                <span class="only-mobile">Симпатия:</span> 
+                                <span class="players-table__like"><img src="images/icons/like.png"> 21</span>
+                                <span class="players-table__like"><img src="images/icons/dislike.png"> 7</span>
+                            </div>
+                            <div class="players-table__col players-table__col_friend">
+                                <a href="#" class="players-table__add-friend">Добавить в друзья</a>  
+                            </div>
+                        </div><!--players-table__data-->
+                    </div><!--toggle-body js-toggle-body-->
+                </div><!--players-table__row js-toggle-->
+
+                <div class="players-table__row js-toggle">
+                    <div class="players-table__col players-table__nick toggle-title js-toggle-title">
+                        <img src="images/avatars/ava1.png" alt="" class="players-table__ava">
+                        <span>Rosario=DD #CS.MONEY</span>
+                    </div>
+                    <div class="toggle-body js-toggle-body">
+                        <div class="players-table__data">
+                            <div class="players-table__col">
+                                <span class="only-mobile">Рейтинг:</span> 
+                                <span class="players-table__rating">70.45</span>
+                            </div>
+                            <div class="players-table__col">
+                                <span class="only-mobile">Матчей:</span> 123
+                            </div>
+                            <div class="players-table__col">
+                                <span class="only-mobile">Побед:</span> 72%
+                            </div>
+                            <div class="players-table__col">
+                                <span class="only-mobile">У/С:</span> 1.7
+                            </div>
+                            <div class="players-table__col">
+                                <span class="only-mobile">MVP:</span> 44.5
+                            </div>
+                            <div class="players-table__col players-table__col_role-wrap">
+                                <span class="only-mobile">Роли:</span> 
+                                <span class="players-table__role">Поддержка</span>    
+                                <span class="players-table__role">Нападающий</span>
+                                <div class="tooltip">
+                                    <span class="players-table__role">+2</span>
+                                    <span class="tooltiptext">
+                                        Капитан
+                                        Менеджер
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="players-table__col players-table__col_like">
+                                <span class="only-mobile">Симпатия:</span> 
+                                <span class="players-table__like"><img src="images/icons/like.png"> 21</span>
+                                <span class="players-table__like"><img src="images/icons/dislike.png"> 7</span>
+                            </div>
+                            <div class="players-table__col players-table__col_friend">
+                                <a href="#" class="players-table__add-friend">Добавить в друзья</a>  
+                            </div>
+                        </div><!--players-table__data-->
+                    </div><!--toggle-body js-toggle-body-->
+                </div><!--players-table__row js-toggle-->
+
+                <div class="players-table__row js-toggle">
+                    <div class="players-table__col players-table__nick toggle-title js-toggle-title">
+                        <img src="images/avatars/ava1.png" alt="" class="players-table__ava">
+                        <span>Rosario=DD #CS.MONEY</span>
+                    </div>
+                    <div class="toggle-body js-toggle-body">
+                        <div class="players-table__data">
+                            <div class="players-table__col">
+                                <span class="only-mobile">Рейтинг:</span> 
+                                <span class="players-table__rating">70.45</span>
+                            </div>
+                            <div class="players-table__col">
+                                <span class="only-mobile">Матчей:</span> 123
+                            </div>
+                            <div class="players-table__col">
+                                <span class="only-mobile">Побед:</span> 72%
+                            </div>
+                            <div class="players-table__col">
+                                <span class="only-mobile">У/С:</span> 1.7
+                            </div>
+                            <div class="players-table__col">
+                                <span class="only-mobile">MVP:</span> 44.5
+                            </div>
+                            <div class="players-table__col players-table__col_role-wrap">
+                                <span class="only-mobile">Роли:</span> 
+                                <span class="players-table__role">Поддержка</span>    
+                                <span class="players-table__role">Нападающий</span>
+                                <div class="tooltip">
+                                    <span class="players-table__role">+2</span>
+                                    <span class="tooltiptext">
+                                        Капитан
+                                        Менеджер
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="players-table__col players-table__col_like">
+                                <span class="only-mobile">Симпатия:</span> 
+                                <span class="players-table__like"><img src="images/icons/like.png"> 21</span>
+                                <span class="players-table__like"><img src="images/icons/dislike.png"> 7</span>
+                            </div>
+                            <div class="players-table__col players-table__col_friend">
+                                <a href="#" class="players-table__add-friend">Добавить в друзья</a>  
+                            </div>
+                        </div><!--players-table__data-->
+                    </div><!--toggle-body js-toggle-body-->
+                </div><!--players-table__row js-toggle-->
+
+                <div class="players-table__row js-toggle">
+                    <div class="players-table__col players-table__nick toggle-title js-toggle-title">
+                        <img src="images/avatars/ava1.png" alt="" class="players-table__ava">
+                        <span>Rosario=DD #CS.MONEY</span>
+                    </div>
+                    <div class="toggle-body js-toggle-body">
+                        <div class="players-table__data">
+                            <div class="players-table__col">
+                                <span class="only-mobile">Рейтинг:</span> 
+                                <span class="players-table__rating">70.45</span>
+                            </div>
+                            <div class="players-table__col">
+                                <span class="only-mobile">Матчей:</span> 123
+                            </div>
+                            <div class="players-table__col">
+                                <span class="only-mobile">Побед:</span> 72%
+                            </div>
+                            <div class="players-table__col">
+                                <span class="only-mobile">У/С:</span> 1.7
+                            </div>
+                            <div class="players-table__col">
+                                <span class="only-mobile">MVP:</span> 44.5
+                            </div>
+                            <div class="players-table__col players-table__col_role-wrap">
+                                <span class="only-mobile">Роли:</span> 
+                                <span class="players-table__role">Поддержка</span>    
+                                <span class="players-table__role">Нападающий</span>
+                                <div class="tooltip">
+                                    <span class="players-table__role">+2</span>
+                                    <span class="tooltiptext">
+                                        Капитан
+                                        Менеджер
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="players-table__col players-table__col_like">
+                                <span class="only-mobile">Симпатия:</span> 
+                                <span class="players-table__like"><img src="images/icons/like.png"> 21</span>
+                                <span class="players-table__like"><img src="images/icons/dislike.png"> 7</span>
+                            </div>
+                            <div class="players-table__col players-table__col_friend">
+                                <a href="#" class="players-table__add-friend">Добавить в друзья</a>  
+                            </div>
+                        </div><!--players-table__data-->
+                    </div><!--toggle-body js-toggle-body-->
+                </div><!--players-table__row js-toggle-->
+
+                <div class="players-table__row js-toggle">
+                    <div class="players-table__col players-table__nick toggle-title js-toggle-title">
+                        <img src="images/avatars/ava1.png" alt="" class="players-table__ava">
+                        <span>Rosario=DD #CS.MONEY</span>
+                    </div>
+                    <div class="toggle-body js-toggle-body">
+                        <div class="players-table__data">
+                            <div class="players-table__col">
+                                <span class="only-mobile">Рейтинг:</span> 
+                                <span class="players-table__rating">70.45</span>
+                            </div>
+                            <div class="players-table__col">
+                                <span class="only-mobile">Матчей:</span> 123
+                            </div>
+                            <div class="players-table__col">
+                                <span class="only-mobile">Побед:</span> 72%
+                            </div>
+                            <div class="players-table__col">
+                                <span class="only-mobile">У/С:</span> 1.7
+                            </div>
+                            <div class="players-table__col">
+                                <span class="only-mobile">MVP:</span> 44.5
+                            </div>
+                            <div class="players-table__col players-table__col_role-wrap">
+                                <span class="only-mobile">Роли:</span> 
+                                <span class="players-table__role">Поддержка</span>    
+                                <span class="players-table__role">Нападающий</span>
+                                <div class="tooltip">
+                                    <span class="players-table__role">+2</span>
+                                    <span class="tooltiptext">
+                                        Капитан
+                                        Менеджер
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="players-table__col players-table__col_like">
+                                <span class="only-mobile">Симпатия:</span> 
+                                <span class="players-table__like"><img src="images/icons/like.png"> 21</span>
+                                <span class="players-table__like"><img src="images/icons/dislike.png"> 7</span>
+                            </div>
+                            <div class="players-table__col players-table__col_friend">
+                                <a href="#" class="players-table__add-friend">Добавить в друзья</a>  
+                            </div>
+                        </div><!--players-table__data-->
+                    </div><!--toggle-body js-toggle-body-->
+                </div><!--players-table__row js-toggle-->
+
+                <div class="players-table__row js-toggle">
+                    <div class="players-table__col players-table__nick toggle-title js-toggle-title">
+                        <img src="images/avatars/ava1.png" alt="" class="players-table__ava">
+                        <span>Rosario=DD #CS.MONEY</span>
+                    </div>
+                    <div class="toggle-body js-toggle-body">
+                        <div class="players-table__data">
+                            <div class="players-table__col">
+                                <span class="only-mobile">Рейтинг:</span> 
+                                <span class="players-table__rating">70.45</span>
+                            </div>
+                            <div class="players-table__col">
+                                <span class="only-mobile">Матчей:</span> 123
+                            </div>
+                            <div class="players-table__col">
+                                <span class="only-mobile">Побед:</span> 72%
+                            </div>
+                            <div class="players-table__col">
+                                <span class="only-mobile">У/С:</span> 1.7
+                            </div>
+                            <div class="players-table__col">
+                                <span class="only-mobile">MVP:</span> 44.5
+                            </div>
+                            <div class="players-table__col players-table__col_role-wrap">
+                                <span class="only-mobile">Роли:</span> 
+                                <span class="players-table__role">Поддержка</span>    
+                                <span class="players-table__role">Нападающий</span>
+                                <div class="tooltip">
+                                    <span class="players-table__role">+2</span>
+                                    <span class="tooltiptext">
+                                        Капитан
+                                        Менеджер
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="players-table__col players-table__col_like">
+                                <span class="only-mobile">Симпатия:</span> 
+                                <span class="players-table__like"><img src="images/icons/like.png"> 21</span>
+                                <span class="players-table__like"><img src="images/icons/dislike.png"> 7</span>
+                            </div>
+                            <div class="players-table__col players-table__col_friend">
+                                <a href="#" class="players-table__add-friend">Добавить в друзья</a>  
+                            </div>
+                        </div><!--players-table__data-->
+                    </div><!--toggle-body js-toggle-body-->
+                </div><!--players-table__row js-toggle-->
+
+                <div class="players-table__row js-toggle">
+                    <div class="players-table__col players-table__nick toggle-title js-toggle-title">
+                        <img src="images/avatars/ava1.png" alt="" class="players-table__ava">
+                        <span>Rosario=DD #CS.MONEY</span>
+                    </div>
+                    <div class="toggle-body js-toggle-body">
+                        <div class="players-table__data">
+                            <div class="players-table__col">
+                                <span class="only-mobile">Рейтинг:</span> 
+                                <span class="players-table__rating">70.45</span>
+                            </div>
+                            <div class="players-table__col">
+                                <span class="only-mobile">Матчей:</span> 123
+                            </div>
+                            <div class="players-table__col">
+                                <span class="only-mobile">Побед:</span> 72%
+                            </div>
+                            <div class="players-table__col">
+                                <span class="only-mobile">У/С:</span> 1.7
+                            </div>
+                            <div class="players-table__col">
+                                <span class="only-mobile">MVP:</span> 44.5
+                            </div>
+                            <div class="players-table__col players-table__col_role-wrap">
+                                <span class="only-mobile">Роли:</span> 
+                                <span class="players-table__role">Поддержка</span>    
+                                <span class="players-table__role">Нападающий</span>
+                                <div class="tooltip">
+                                    <span class="players-table__role">+2</span>
+                                    <span class="tooltiptext">
+                                        Капитан
+                                        Менеджер
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="players-table__col players-table__col_like">
+                                <span class="only-mobile">Симпатия:</span> 
+                                <span class="players-table__like"><img src="images/icons/like.png"> 21</span>
+                                <span class="players-table__like"><img src="images/icons/dislike.png"> 7</span>
+                            </div>
+                            <div class="players-table__col players-table__col_friend">
+                                <a href="#" class="players-table__add-friend">Добавить в друзья</a>  
+                            </div>
+                        </div><!--players-table__data-->
+                    </div><!--toggle-body js-toggle-body-->
+                </div><!--players-table__row js-toggle-->
+
+                <div class="players-table__row js-toggle">
+                    <div class="players-table__col players-table__nick toggle-title js-toggle-title">
+                        <img src="images/avatars/ava1.png" alt="" class="players-table__ava">
+                        <span>Rosario=DD #CS.MONEY</span>
+                    </div>
+                    <div class="toggle-body js-toggle-body">
+                        <div class="players-table__data">
+                            <div class="players-table__col">
+                                <span class="only-mobile">Рейтинг:</span> 
+                                <span class="players-table__rating">70.45</span>
+                            </div>
+                            <div class="players-table__col">
+                                <span class="only-mobile">Матчей:</span> 123
+                            </div>
+                            <div class="players-table__col">
+                                <span class="only-mobile">Побед:</span> 72%
+                            </div>
+                            <div class="players-table__col">
+                                <span class="only-mobile">У/С:</span> 1.7
+                            </div>
+                            <div class="players-table__col">
+                                <span class="only-mobile">MVP:</span> 44.5
+                            </div>
+                            <div class="players-table__col players-table__col_role-wrap">
+                                <span class="only-mobile">Роли:</span> 
+                                <span class="players-table__role">Поддержка</span>    
+                                <span class="players-table__role">Нападающий</span>
+                                <div class="tooltip">
+                                    <span class="players-table__role">+2</span>
+                                    <span class="tooltiptext">
+                                        Капитан
+                                        Менеджер
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="players-table__col players-table__col_like">
+                                <span class="only-mobile">Симпатия:</span> 
+                                <span class="players-table__like"><img src="images/icons/like.png"> 21</span>
+                                <span class="players-table__like"><img src="images/icons/dislike.png"> 7</span>
+                            </div>
+                            <div class="players-table__col players-table__col_friend">
+                                <a href="#" class="players-table__add-friend">Добавить в друзья</a>  
+                            </div>
+                        </div><!--players-table__data-->
+                    </div><!--toggle-body js-toggle-body-->
+                </div><!--players-table__row js-toggle-->
+
+                <div class="players-table__row js-toggle">
+                    <div class="players-table__col players-table__nick toggle-title js-toggle-title">
+                        <img src="images/avatars/ava1.png" alt="" class="players-table__ava">
+                        <span>Rosario=DD #CS.MONEY</span>
+                    </div>
+                    <div class="toggle-body js-toggle-body">
+                        <div class="players-table__data">
+                            <div class="players-table__col">
+                                <span class="only-mobile">Рейтинг:</span> 
+                                <span class="players-table__rating">70.45</span>
+                            </div>
+                            <div class="players-table__col">
+                                <span class="only-mobile">Матчей:</span> 123
+                            </div>
+                            <div class="players-table__col">
+                                <span class="only-mobile">Побед:</span> 72%
+                            </div>
+                            <div class="players-table__col">
+                                <span class="only-mobile">У/С:</span> 1.7
+                            </div>
+                            <div class="players-table__col">
+                                <span class="only-mobile">MVP:</span> 44.5
+                            </div>
+                            <div class="players-table__col players-table__col_role-wrap">
+                                <span class="only-mobile">Роли:</span> 
+                                <span class="players-table__role">Поддержка</span>    
+                                <span class="players-table__role">Нападающий</span>
+                                <div class="tooltip">
+                                    <span class="players-table__role">+2</span>
+                                    <span class="tooltiptext">
+                                        Капитан
+                                        Менеджер
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="players-table__col players-table__col_like">
+                                <span class="only-mobile">Симпатия:</span> 
+                                <span class="players-table__like"><img src="images/icons/like.png"> 21</span>
+                                <span class="players-table__like"><img src="images/icons/dislike.png"> 7</span>
+                            </div>
+                            <div class="players-table__col players-table__col_friend"> 
+                                <a href="#" class="players-table__add-friend">Добавить в друзья</a>  
+                            </div>
+                        </div><!--players-table__data-->
+                    </div><!--toggle-body js-toggle-body-->
+                </div><!--players-table__row js-toggle-->
+
+                <div class="players-table__row js-toggle">
+                    <div class="players-table__col players-table__nick toggle-title js-toggle-title">
+                        <img src="images/avatars/ava1.png" alt="" class="players-table__ava">
+                        <span>Rosario=DD #CS.MONEY</span>
+                    </div>
+                    <div class="toggle-body js-toggle-body">
+                        <div class="players-table__data">
+                            <div class="players-table__col">
+                                <span class="only-mobile">Рейтинг:</span> 
+                                <span class="players-table__rating">70.45</span>
+                            </div>
+                            <div class="players-table__col">
+                                <span class="only-mobile">Матчей:</span> 123
+                            </div>
+                            <div class="players-table__col">
+                                <span class="only-mobile">Побед:</span> 72%
+                            </div>
+                            <div class="players-table__col">
+                                <span class="only-mobile">У/С:</span> 1.7
+                            </div>
+                            <div class="players-table__col">
+                                <span class="only-mobile">MVP:</span> 44.5
+                            </div>
+                            <div class="players-table__col players-table__col_role-wrap">
+                                <span class="only-mobile">Роли:</span> 
+                                <span class="players-table__role">Поддержка</span>    
+                                <span class="players-table__role">Нападающий</span>
+                                <div class="tooltip">
+                                    <span class="players-table__role">+2</span>
+                                    <span class="tooltiptext">
+                                        Капитан
+                                        Менеджер
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="players-table__col players-table__col_like">
+                                <span class="only-mobile">Симпатия:</span> 
+                                <span class="players-table__like"><img src="images/icons/like.png"> 21</span>
+                                <span class="players-table__like"><img src="images/icons/dislike.png"> 7</span>
+                            </div>
+                            <div class="players-table__col players-table__col_friend">
+                                <a href="#" class="players-table__add-friend">Добавить в друзья</a>  
+                            </div>
+                        </div><!--players-table__data-->
+                    </div><!--toggle-body js-toggle-body-->
+                </div><!--players-table__row js-toggle-->
+
+                <div class="players-table__row js-toggle">
+                    <div class="players-table__col players-table__nick toggle-title js-toggle-title">
+                        <img src="images/avatars/ava1.png" alt="" class="players-table__ava">
+                        <span>Rosario=DD #CS.MONEY</span>
+                    </div>
+                    <div class="toggle-body js-toggle-body">
+                        <div class="players-table__data">
+                            <div class="players-table__col">
+                                <span class="only-mobile">Рейтинг:</span> 
+                                <span class="players-table__rating">70.45</span>
+                            </div>
+                            <div class="players-table__col">
+                                <span class="only-mobile">Матчей:</span> 123
+                            </div>
+                            <div class="players-table__col">
+                                <span class="only-mobile">Побед:</span> 72%
+                            </div>
+                            <div class="players-table__col">
+                                <span class="only-mobile">У/С:</span> 1.7
+                            </div>
+                            <div class="players-table__col">
+                                <span class="only-mobile">MVP:</span> 44.5
+                            </div>
+                            <div class="players-table__col players-table__col_role-wrap">
+                                <span class="only-mobile">Роли:</span> 
+                                <span class="players-table__role">Поддержка</span>    
+                                <span class="players-table__role">Нападающий</span>
+                                <div class="tooltip">
+                                    <span class="players-table__role">+2</span>
+                                    <span class="tooltiptext">
+                                        Капитан
+                                        Менеджер
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="players-table__col players-table__col_like">
+                                <span class="only-mobile">Симпатия:</span> 
+                                <span class="players-table__like"><img src="images/icons/like.png"> 21</span>
+                                <span class="players-table__like"><img src="images/icons/dislike.png"> 7</span>
+                            </div>
+                            <div class="players-table__col players-table__col_friend"> 
+                                <a href="#" class="players-table__add-friend">Добавить в друзья</a>  
+                            </div>
+                        </div><!--players-table__data-->
+                    </div><!--toggle-body js-toggle-body-->
+                </div><!--players-table__row js-toggle-->
+            </div><!--.players-table-->
+            </div><!--.search-results-->
+        </div><!--.search-players-wrapper-->
+
+
+        <div id="ex1" class="modal modal-form">
+            <form action="">
+                <label class="modal-form__title">Подача заявки</label>
+                <div class="search-form__row">                    
+                    <label for="player_rating" class="search-form__label">Роль</label>
+                    <div class="checkbox-wrap">
+                        <label class="custom-checkbox-circle">
+                            <input type="checkbox" name="player_role" value="Снайпер">
+                            <span>Снайпер</span>
+                        </label>
+                        <label class="custom-checkbox-circle">
+                            <input type="checkbox" name="player_role" value="Поддержка">
+                            <span>Поддержка</span>
+                        </label>
+                        <label class="custom-checkbox-circle">
+                            <input type="checkbox" name="player_role" value="Энтри фрагер">
+                            <span>Энтри фрагер</span>
+                        </label>
+                        <label class="custom-checkbox-circle">
+                            <input type="checkbox" name="player_role" value="Люркер">
+                            <span>Люркер</span>
+                        </label>
+                        <label class="custom-checkbox-circle">
+                            <input type="checkbox" name="player_role" value="Капитан">
+                            <span>Капитан</span>
+                        </label>
+                        <label class="custom-checkbox-circle">
+                            <input type="checkbox" name="player_role" value="Тренер">
+                            <span>Тренер</span>
+                        </label>
+                        <label class="custom-checkbox-circle">
+                            <input type="checkbox" name="player_role" value="Менеджер">
+                            <span>Менеджер</span>
+                        </label>
+                        <label class="custom-checkbox-circle">
+                            <input type="checkbox" name="player_role" value="Аналитик">
+                            <span>Аналитик</span>
+                        </label>
+                    </div>
+                </div><!--.search-form__row-->
+                <div class="search-form__row">
+                    <label for="player_rating" class="search-form__label">Количество часов в игре</label>
+                    <input type="text" id="new_player_hours" name="new_player_hours" value="" />
+                </div><!--.search-form__row-->
+                <div class="search-form__row">
+                    <label for="player_rating" class="search-form__label">Роль</label>
+                        <div class="checkbox-images-wrap">
+                            <label class="custom-checkbox-image">
+                                <input type="radio" name="player_rang" value="rang-1">
+                                <span><img src="images/rangs/rang-1.jpg"></span>
+                            </label>
+                            <label class="custom-checkbox-image">
+                                <input type="radio" name="player_rang" value="rang-2">
+                                <span><img src="images/rangs/rang-2.jpg"></span>
+                            </label>
+                            <label class="custom-checkbox-image">
+                                <input type="radio" name="player_rang" value="rang-3">
+                                <span><img src="images/rangs/rang-3.jpg"></span>
+                            </label>
+                            <label class="custom-checkbox-image">
+                                <input type="radio" name="player_rang" value="rang-4">
+                                <span><img src="images/rangs/rang-4.jpg"></span>
+                            </label>
+                            <label class="custom-checkbox-image">
+                                <input type="radio" name="player_rang" value="rang-5">
+                                <span><img src="images/rangs/rang-5.jpg"></span>
+                            </label>
+                            <label class="custom-checkbox-image">
+                                <input type="radio" name="player_rang" value="rang-6">
+                                <span><img src="images/rangs/rang-6.jpg"></span>
+                            </label>
+                            <label class="custom-checkbox-image">
+                                <input type="radio" name="player_rang" value="rang-7">
+                                <span><img src="images/rangs/rang-7.jpg"></span>
+                            </label>
+                            <label class="custom-checkbox-image">
+                                <input type="radio" name="player_rang" value="rang-8">
+                                <span><img src="images/rangs/rang-8.jpg"></span>
+                            </label>
+                            <label class="custom-checkbox-image">
+                                <input type="radio" name="player_rang" value="rang-9">
+                                <span><img src="images/rangs/rang-9.jpg"></span>
+                            </label>
+                            <label class="custom-checkbox-image">
+                                <input type="radio" name="player_rang" value="rang-10">
+                                <span><img src="images/rangs/rang-10.jpg"></span>
+                            </label>
+                            <label class="custom-checkbox-image">
+                                <input type="radio" name="player_rang" value="rang-11">
+                                <span><img src="images/rangs/rang-11.jpg"></span>
+                            </label>
+                            <label class="custom-checkbox-image">
+                                <input type="radio" name="player_rang" value="rang-12">
+                                <span><img src="images/rangs/rang-12.jpg"></span>
+                            </label>
+                            <label class="custom-checkbox-image">
+                                <input type="radio" name="player_rang" value="rang-13">
+                                <span><img src="images/rangs/rang-13.jpg"></span>
+                            </label>
+                            <label class="custom-checkbox-image">
+                                <input type="radio" name="player_rang" value="rang-14">
+                                <span><img src="images/rangs/rang-14.jpg"></span>
+                            </label>
+                            <label class="custom-checkbox-image">
+                                <input type="radio" name="player_rang" value="rang-15">
+                                <span><img src="images/rangs/rang-15.jpg"></span>
+                            </label>
+                            <label class="custom-checkbox-image">
+                                <input type="radio" name="player_rang" value="rang-16">
+                                <span><img src="images/rangs/rang-16.jpg"></span>
+                            </label>
+                            <label class="custom-checkbox-image">
+                                <input type="radio" name="player_rang" value="rang-17">
+                                <span><img src="images/rangs/rang-17.jpg"></span>
+                            </label>
+                            <label class="custom-checkbox-image">
+                                <input type="radio" name="player_rang" value="rang-18">
+                                <span><img src="images/rangs/rang-18.jpg"></span>
+                            </label>
+                        </div>
+                    </div>
+                <div class="search-form__rules">
+                    <button class="search-form__button">Подать</button>
+                </div>
+            </form>
+        </div>
+    </div><!--container-->
+    
+    <script>        
+        $(".js-reset-form").on("click", function() {
+            var player_rating = $("#player_rating").data("ionRangeSlider");
+            var player_hours = $("#player_hours").data("ionRangeSlider");
+            player_rating.reset();
+            player_hours.reset();
+        })        
+
+        $(".js-open-modal").on("click", function() {
+            $("#new_player_hours").ionRangeSlider({
+                skin: "round",
+                min: 0,
+                max: 500,
+                from: 388,
+                prefix: "от ",
+                postfix: " часов"
+            });
+        }) 
+
+        $("#player_rating").ionRangeSlider({
+            skin: "round",
+            type: "double",
+            min: 0,
+            max: 100,
+            from: 10,
+            to: 75,
+        });
+
+        $("#player_hours").ionRangeSlider({
+            skin: "round",
+            min: 0,
+            max: 500,
+            from: 388,
+            prefix: "от ",
+            postfix: " часов"
+        });
+    </script>
+    <script src="scripts/mobile-toggle.js"></script>
+</body>
+</html>

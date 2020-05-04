@@ -1,0 +1,319 @@
+$color_black1: #202328
+$color_black2: #1f2227
+$color_black3: #272d35
+$color_black4: #111419
+$color_white: #ffffff
+$color_green: #679147
+$color_red: #ef3f40
+$color_grey1: #555d69
+$color_grey2: #4f5661
+$color_grey3: #34373d
+$color_grey4: #454950
+$color_grey5: #8c8f95
+
+@import "include/media"
+@import "include/toggle"
+@import "include/player-table"
+
+/*Custom Range Slider*/
+.irs-min,
+.irs-max
+  display: none
+
+.irs--round
+  height: 85px
+
+  .irs-line,
+  .irs-bar
+    height: 7px
+
+  .irs-bar
+    background-color: #616263
+    background-image: linear-gradient(to right, #6c52b4 0%, #9a4d9a 100%)
+
+  .irs-handle
+    top: 30px
+    border: 0
+    width: 18px
+    height: 18px
+
+  .irs-from,
+  .irs-to,
+  .irs-single
+    top: auto
+    bottom: -70px
+    font-size: 12px
+    background-color: #616263
+
+    &:before
+      border-top-color:  #111419
+      border-bottom-color: #616263
+      bottom: auto
+      top: -6px
+
+.search-players-wrapper
+  padding: 25px
+  display: flex
+  flex-direction: row
+
+  @media #{$laptop}
+    padding: 25px 10px
+
+  @media #{$mobile}
+    flex-direction: column
+    padding: 25px 10px
+
+.search-bar
+  width: 375px
+
+  @media #{$laptop}
+    width: 250px
+  
+  @media #{$tablet}
+    width: 30%
+
+  @media #{$mobile}
+    width: 100%
+    max-width: 100%
+
+.search-results
+  width: calc(100% - 400px)
+  margin-left: 25px
+
+  @media #{$laptop}
+    width: calc(100% - 275px) 
+
+  @media #{$tablet}
+    margin-left: 25px
+    width: calc(70% - 25px) 
+
+  @media #{$mobile}
+    width: 100%
+    margin-left: 0
+    margin-top: 15px
+
+.search-form
+  &__row
+    position: relative
+    border-bottom: 1px solid #2d2e33
+    padding: 15px 0 0 0
+
+    @media #{$mobileAndTablet}
+      padding: 5px 0
+
+  &__rules
+    margin: 25px 0
+    text-align: center
+
+    @media #{$mobile}
+      margin: 15px 0
+
+  &__label
+    color: #6b6c6c
+    font-family: Arial
+    font-size: 15px
+    font-weight: 400
+    
+    @media #{$mobileAndTablet}
+      display: block
+      height: 30px
+      line-height: 30px
+
+    @media #{$tablet}
+      font-size: 12px
+
+  &__button
+    border: 0
+    color: #ffffff
+    font-family: Arial
+    font-size: 15px
+    font-weight: 600
+    width: 170px
+    height: 42px
+    box-shadow: 0 4px 0 #503588
+    border-radius: 21px
+    background-color: #7051b2
+    text-transform: uppercase
+    cursor: pointer
+    margin: 15px
+    outline: none
+
+    @media #{$tablet}
+      display: block
+      margin: 15px auto
+
+    @media #{$mobile}
+      width: 110px
+      height: 30px
+      font-size: 13px
+      margin: 0 15px 0 0
+
+    &:hover 
+      background-color: rgba(112, 81, 178, 0.5)
+
+  &__clear
+    color: #8b8b8b
+    font-family: Arial
+    font-size: 11px
+    font-weight: 400
+    width: 93px
+    height: 21px
+    border-radius: 10px
+    background: #111419
+    border: 2px solid #2d2e33
+    text-transform: uppercase
+    cursor: pointer
+    outline: none
+
+    @media #{$tablet}
+      display: block
+      margin: 0 auto
+
+    @media #{$mobile}
+      width: 80px
+
+    &:hover 
+      background-color: rgba(0, 0, 0, 0.5)
+
+/*custom checkbox circle*/
+.checkbox-wrap
+  display: flex;
+  flex-wrap: wrap;
+
+  @media #{$tablet}
+    margin: 10px 0
+
+.checkbox-circle 
+  margin-bottom: 0.2em
+
+.custom-checkbox-circle
+  margin: 15px 0
+  width: 124px
+  cursor: pointer
+
+  @media #{$tablet}
+    margin: 3px 0
+  
+  @media #{$mobile}
+    width: 50%
+    margin: 7px 0
+
+  & > input
+    position: absolute
+    z-index: -1
+    opacity: 0
+
+  & > span
+    display: inline-flex
+    align-items: center
+    user-select: none
+    color: #ffffff
+    font-family: Arial 
+    font-size: 15px
+
+    @media #{$laptop}
+      font-size: 13px
+
+    @media #{$tablet}
+      font-size: 13px
+
+  & > span::before
+    content: ''
+    display: inline-block
+    width: 13px
+    height: 13px
+    flex-shrink: 0
+    flex-grow: 0
+    border: 1px solid #ffffff
+    border-radius: 50%
+    margin-right: 5px
+    background-repeat: no-repeat
+    background-position: center center
+    background-size: 50% 50%
+
+  & > input:not(:disabled):active + span::before
+    background-color: #f772d1
+    border-color: #ffffff
+
+  & > input:focus+span::before
+    box-shadow: 0 0 0 0.2rem rgba(152, 78, 156, 0.25)
+    
+  & > input:focus:not(:checked)+span::before
+    border-color: #f772d1
+
+  & > input:checked+span::before
+    border-color: #ffffff
+    background: linear-gradient(45deg, #f772d1 0%, #6c52b5 100%)
+
+  & > input:disabled+span::before 
+    background-color: #e9ecef
+
+/*images checkbox*/
+.checkbox-images-wrap
+  display: flex
+  flex-wrap: wrap
+  margin: 15px 0
+
+.custom-checkbox-image
+  width: 60px
+  padding-right: 9px
+  margin: 8px 0
+  box-sizing: border-box
+  cursor: pointer
+
+  @media #{$tablet}
+    margin: 4px 0
+    width: 63px
+  
+  @media #{$mobile}
+    display: inline-flex
+    margin: 6px 12px 6px 0
+    width: 55px
+    padding: 0
+
+  & > input
+    position: absolute
+    z-index: -1
+    opacity: 0
+
+  & span
+    display: inline-flex
+    position: relative
+
+  & > input:checked+span::after
+    content: ""
+    display: block
+    position: absolute
+    width: 100%
+    height: 90%
+    top: 10%
+    left: 0
+    background: linear-gradient(to top, rgba(153, 77, 155, 1), rgba(153, 77, 155, 0))
+
+.modal-form 
+  background: #181b20
+  border-radius: 25px
+
+  @media #{$mobile}
+    padding: 15px 15px
+
+  &__title
+    display: block
+    color: #6b6c6c
+    font-family: Arial
+    font-size: 17px
+    margin-bottom: 10px
+
+  a.close-modal
+    width: 20px
+    height: 20px
+    top: 15px
+    right: 15px
+    background-image: url(../images/icons/close-btn.png)
+
+  .search-form__button
+    margin-top: 0
+    margin-bottom: 0
+
+.blocker
+  z-index: 3

@@ -1,0 +1,35 @@
+@import "media"
+
+/*this class toggle elements on mobile and tablet*/
+@media #{$mobileAndTablet}
+  .toggle-body 
+      display: none
+
+  .toggle-title
+    position: relative
+    cursor: pointer
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+
+    &:hover:before
+      transform: translateY(1px)
+
+    &:before
+      position: absolute
+      content: ''
+      right: 0
+      top: 0
+      width: 30px
+      height: 100%
+      background: url(../images/icons/keyboard-arrow-down_117120.svg) no-repeat center center
+      cursor: pointer
+      transition: .2s
+      transition-timing-function: ease-in-out
+
+    &.open:before
+      transform: rotate(180deg)
+
+  @media #{$desktop} 
+    display: none !important
+
+  @media #{$mobileAndTablet} 
+    display: inline-block

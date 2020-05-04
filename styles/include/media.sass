@@ -1,0 +1,12 @@
+$mobile: "(max-width: 767.98px)"
+$mobileAndTablet: "(max-width: 1024px)"
+$tablet: "(min-width: 768px) and (max-width: 1024px)"
+$desktop: "(min-width: 1025px)"
+$laptop: "(min-width: 1025px) and (max-width: 1400px)"
+
+.only-mobile
+  @media #{$desktop} 
+    display: none !important
+
+  @media #{$mobileAndTablet} 
+    display: inline-block
