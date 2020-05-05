@@ -233,3 +233,72 @@
 
     @media #{$mobile}
       width: 100%
+
+.match-maps
+  display: flex
+  margin-top: 40px
+  margin-bottom: -25px
+
+  @media #{$desktop}
+    flex-direction: row
+    justify-content: space-between
+
+  @media #{$mobile}
+    flex-wrap: wrap
+    justify-content: center
+    margin: 10px 0
+
+  &__button
+    width: 175px
+    height: 40px
+    text-align: center
+    font-size: 14px
+    font-weight: bold
+    line-height: 40px
+    background-size: cover
+    text-decoration: none
+    color: #ffffff
+    margin: 0 5px
+    border: 1px solid rgba(100, 100, 100, 0.7)
+    position: relative
+    z-index: 1
+
+    &:hover
+      opacity: 0.85
+
+    @media #{$tablet}
+      font-size: 12px
+
+    @media #{$mobile}
+      width: 147px
+      max-width: calc(50% - 15px)
+      margin: 5px
+
+    &::before
+      content: ""
+      position: absolute
+      z-index: 2
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      background-color: rgba(18, 25, 35, 0.6)
+
+    &.active
+      border-bottom: 1px solid #CC4333
+
+      &::after
+        content: ""
+        position: absolute
+        z-index: 3
+        top: 50%
+        left: 0
+        right: 0
+        bottom: 0
+        background: linear-gradient(180deg, rgba(204, 67, 51, 0) 0%, #CC4333 100%);
+        opacity: 0.3;
+
+  &__label
+    position: relative
+    z-index: 4
+  
