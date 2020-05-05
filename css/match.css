@@ -66,6 +66,26 @@
 
 .match {
   font-family: Arial;
+  max-width: 1800px;
+  padding: 0 20px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position-y: top;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .match {
+    background-size: 180%;
+    background-position-x: center;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .match {
+    background-size: 250%;
+    padding: 0 10px;
+    background-position-x: center;
+  }
 }
 
 .match-header {
@@ -85,8 +105,26 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  border-bottom: 1px solid #171B20;
   padding: 15px 0;
+  position: relative;
+}
+
+.match-header::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: calc(50% - 45px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.match-header::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: calc(50% - 45px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 @media (max-width: 767.98px) {
@@ -162,7 +200,6 @@
   margin-top: -30px;
   z-index: 10;
   padding: 0 20px;
-  background: #111418;
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -246,7 +283,7 @@
 }
 
 .match-banner__button {
-  width: 258px;
+  padding: 0 25px;
   font-style: normal;
   font-weight: bold;
   font-size: 14px;
@@ -489,8 +526,25 @@
   background-color: rgba(18, 25, 35, 0.6);
 }
 
-.match-maps__button.active {
+.match-maps__button.ban {
   border-bottom: 1px solid #CC4333;
+}
+
+.match-maps__button.ban::after {
+  content: "";
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(204, 67, 51, 0)), to(#CC4333));
+  background: linear-gradient(180deg, rgba(204, 67, 51, 0) 0%, #CC4333 100%);
+  opacity: 0.3;
+}
+
+.match-maps__button.active {
+  border-bottom: 1px solid #65B44C;
 }
 
 .match-maps__button.active::after {
@@ -501,8 +555,8 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(204, 67, 51, 0)), to(#CC4333));
-  background: linear-gradient(180deg, rgba(204, 67, 51, 0) 0%, #CC4333 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(101, 180, 76, 0)), to(#65B44C));
+  background: linear-gradient(180deg, rgba(101, 180, 76, 0) 0%, #65B44C 100%);
   opacity: 0.3;
 }
 

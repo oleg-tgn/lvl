@@ -4,6 +4,20 @@
 
 .match
   font-family: Arial
+  max-width: 1800px
+  padding: 0 20px
+  background-size: 100%
+  background-repeat: no-repeat
+  background-position-y: top
+
+  @media #{$tablet}
+    background-size: 180%
+    background-position-x: center
+
+  @media #{$mobile}
+    background-size: 250%
+    padding: 0 10px
+    background-position-x: center
 
 .match-header
   font-style: normal
@@ -15,8 +29,25 @@
   display: flex
   flex-direction: row
   justify-content: space-between
-  border-bottom: 1px solid #171B20
   padding: 15px 0
+  position: relative
+
+  &::before
+    content: ""
+    position: absolute
+    bottom: 0
+    left: 0
+    width: calc(50% - 45px)
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5)
+
+  &::after
+    content: ""
+    position: absolute
+    bottom: 0
+    right: 0
+    width: calc(50% - 45px)
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5)
+    
 
   @media #{$mobile}
     font-size: 12px
@@ -58,7 +89,6 @@
     margin-top: -30px
     z-index: 10
     padding: 0 20px
-    background: #111418
     
     @media #{$tablet} 
       margin-top: -70px
@@ -120,7 +150,7 @@
       margin-bottom: 40px;
 
   &__button
-    width: 258px
+    padding: 0 25px
     font-style: normal
     font-weight: bold
     font-size: 14px
@@ -284,7 +314,7 @@
       bottom: 0
       background-color: rgba(18, 25, 35, 0.6)
 
-    &.active
+    &.ban
       border-bottom: 1px solid #CC4333
 
       &::after
@@ -295,8 +325,23 @@
         left: 0
         right: 0
         bottom: 0
-        background: linear-gradient(180deg, rgba(204, 67, 51, 0) 0%, #CC4333 100%);
-        opacity: 0.3;
+        background: linear-gradient(180deg, rgba(204, 67, 51, 0) 0%, #CC4333 100%)
+        opacity: 0.3
+        
+    &.active
+      &.ban
+      border-bottom: 1px solid #65B44C
+
+      &::after
+        content: ""
+        position: absolute
+        z-index: 3
+        top: 50%
+        left: 0
+        right: 0
+        bottom: 0
+        background: linear-gradient(180deg, rgba(101, 180, 76, 0) 0%, #65B44C 100%)
+        opacity: 0.3
 
   &__label
     position: relative

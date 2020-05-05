@@ -7,12 +7,16 @@
   font-family: Arial
   background-color: #202328
 
+  &_match
+    background-color: rgba(0, 0, 0, 0)
+
   @media #{$laptop}
     font-size: 12px
 
   &__row
     display: flex
     flex-direction: row
+    background-color: #202328
     border-bottom: 1px solid #2d2e33
     padding: 0 40px
     position: relative
@@ -25,7 +29,7 @@
       padding: 0 15px
 
     &_header
-      background: #111419
+      background-color: rgba(0, 0, 0, 0)
       align-items: center
       
       @media #{$mobileAndTablet}
