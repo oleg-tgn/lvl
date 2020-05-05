@@ -1,0 +1,55 @@
+@media (min-width: 1025px) {
+  .only-mobile {
+    display: none !important;
+  }
+}
+
+@media (max-width: 1024px) {
+  .only-mobile {
+    display: inline-block;
+  }
+}
+
+/*this class toggle elements on mobile and tablet*/
+@media (max-width: 1024px) {
+  .toggle-body {
+    display: none;
+  }
+  .toggle-title {
+    position: relative;
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    padding-right: 30px;
+  }
+  .toggle-title:hover:before {
+    -webkit-transform: translateY(1px);
+            transform: translateY(1px);
+  }
+  .toggle-title:before {
+    position: absolute;
+    content: '';
+    right: 0;
+    top: 0;
+    width: 30px;
+    height: 100%;
+    background: url(../images/icons/keyboard-arrow-down_117120.svg) no-repeat center center;
+    cursor: pointer;
+    -webkit-transition: .2s;
+    transition: .2s;
+    -webkit-transition-timing-function: ease-in-out;
+            transition-timing-function: ease-in-out;
+  }
+  .toggle-title.open:before {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 1025px) {
+  display: none !important;
+}
+
+@media (max-width: 1024px) and (max-width: 1024px) {
+  display: inline-block;
+}
+/*# sourceMappingURL=toggle.css.map */

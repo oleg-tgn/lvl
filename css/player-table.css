@@ -454,7 +454,17 @@
 }
 
 .players-table__name {
+  display: inline-block;
   color: #FDB81C;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+@media (max-width: 1024px) {
+  .players-table__name {
+    max-width: calc(100% - 75px);
+    overflow: hidden;
+  }
 }
 
 .players-table-panel {
