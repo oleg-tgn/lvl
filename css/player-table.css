@@ -252,6 +252,7 @@
 
 .players-table__rating_match-up {
   color: #65B44C;
+  position: relative;
 }
 
 @media (max-width: 1024px) {
@@ -271,6 +272,7 @@
 
 .players-table__rating_match-down {
   color: #CC4333;
+  position: relative;
 }
 
 @media (max-width: 1024px) {

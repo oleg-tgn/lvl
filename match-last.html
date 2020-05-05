@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!--Custom Range-->
+    <!--Plugin CSS file with desired skin-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css"/>
+    <!--jQuery-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!--Plugin JavaScript file-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>
+    <!--End Custom Scrollbar-->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+
+    <title>Match Team Left</title>
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/player-table.css">
+    <link rel="stylesheet" href="css/match.css">
+</head>
+<body>
+    <header class="header-temp"></header>
+    <div class="container container_match">
+        <div class="aside-temp"></div>
+        <div class="match-wrapper">
+            <div class="match" style="background-image: url(images/match/bg-dust2.png);">
+                <div class="match-header">
+                    <div class="match-header__side">
+                        <span class="match-header__info">ID: 1301345</span>
+                        <span class="match-header__info">Mode: 5v5</span>
+                        <span class="match-header__info">Карта: Dust2</span>
+                    </div>
+                    <div class="match-header__side">
+                        <span class="match-header__info">Регион: Россия</span>
+                        <span class="match-header__info">14.04.2020</span>
+                    </div>
+                </div>
+
+                <div class="match-banner">
+                    <div class="match-banner__team">
+                        <div class="match-banner__team-logo active">
+                            <img src="images/match/team-1.png" alt="">
+                        </div>
+                        <div class="match-banner__team-name">
+                            Hellrasers
+                        </div>
+                        <div class="match-banner__team-statistic">
+                            1063
+                        </div>
+                    </div>
+                    <div class="match-banner__center">
+                        <div class="match-banner__logo">
+                            <img src="images/match/icons_lig.png" alt="">
+                        </div>
+                        <div class="match-banner__title">
+                            Матч в лиге Spring League
+                        </div>
+                        <div class="match-banner__status">
+                            22:09 — завершён
+                        </div>
+                        <div class="match-banner__timer">
+                            16 - 04
+                        </div>
+                    </div>
+                    <div class="match-banner__team">
+                        <div class="match-banner__team-logo">
+                            <img src="images/match/team-2.png" alt="">
+                        </div>
+                        <div class="match-banner__team-name">
+                            Godsent
+                        </div>
+                        <div class="match-banner__team-statistic">
+                            988
+                        </div>
+                    </div>
+                </div>
+                <div class="match-maps">
+                    <a href="#" class="match-maps__button ban" style="background-image: url(images/match/maps/inferno.jpg)"><span class="match-maps__label">Inferno<span></a>
+                    <a href="#" class="match-maps__button ban" style="background-image: url(images/match/maps/train.jpg)"><span class="match-maps__label">Train<span></a>
+                    <a href="#" class="match-maps__button ban" style="background-image: url(images/match/maps/nuke.jpg)"><span class="match-maps__label">Nuke<span></a>
+                    <a href="#" class="match-maps__button ban" style="background-image: url(images/match/maps/overpass.jpg)"><span class="match-maps__label">Overpass<span></a>
+                    <a href="#" class="match-maps__button ban" style="background-image: url(images/match/maps/cache.jpg)"><span class="match-maps__label">Cache<span></a>
+                    <a href="#" class="match-maps__button ban" style="background-image: url(images/match/maps/mirage.jpg)"><span class="match-maps__label">Mirage<span></a>
+                    <a href="#" class="match-maps__button active" style="background-image: url(images/match/maps/dust2.jpg)"><span class="match-maps__label">Dust 2<span></a>
+                </div>
+                <div class="match-results">
+                    <div class="match-results__col">
+                        <div class="players-table players-table_match">
+                            <div class="players-table__row players-table__row_match players-table__row_header">
+                                <div class="players-table__col players-table__nick players-table__nick_match-title players-table__col_match players-table__col_match-title">
+                                    Игрок
+                                </div>
+                                <div class="toggle-body toggle-body_match">
+                                    <div class="players-table__data">
+                                        <div class="players-table__col players-table__col_match players-table__col_match-title">
+                                            Убийства
+                                        </div>
+                                        <div class="players-table__col players-table__col_match players-table__col_match-title">
+                                            Смерти
+                                        </div>
+                                        <div class="players-table__col players-table__col_match players-table__col_match-title">
+                                            Ассисты
+                                        </div>    
+                                        <div class="players-table__col players-table__col_match players-table__col_match-title">
+                                            Рейтинг
+                                        </div>                                    
+                                    </div><!--players-table__data-->
+                                </div>
+                            </div>
+                            <div class="players-table__row activate-panel players-table__row_match js-toggle">
+                                <div class="players-table__col players-table__nick players-table__nick_match players-table__col_match  toggle-title js-toggle-title">                            
+                                    <span class="players-table__position"><img src="images/match/first_place.svg"></span>                                    
+                                    <span class="players-table__ava players-table__ava_match online"><img src="images/match/ava1.png" alt=""></span>
+                                    <span class="players-table__name">Nolan Torff</span>
+                                </div>
+                                <div class="toggle-body toggle-body_match js-toggle-body">
+                                    <div class="players-table__data">
+                                        <div class="players-table__col players-table__col_match">
+                                            <span class="only-mobile">Убийства:</span> 
+                                            <span>18</span>
+                                        </div>
+                                        <div class="players-table__col players-table__col_match">
+                                            <span class="only-mobile">Смерти:</span> 10
+                                        </div>
+                                        <div class="players-table__col players-table__col_match">
+                                            <span class="only-mobile">Ассисты:</span> 10
+                                        </div>
+                                        <div class="players-table__col players-table__col_match">
+                                            <span class="only-mobile">Рейтинг:</span> 
+                                            <span class="players-table__rating_match-up">11.64</span>
+                                        </div>
+                                        <div class="players-table-panel">
+                                            <a href="#" class="players-table-panel__button">
+                                                <img src="images/match/add_user.svg">
+                                            </a>
+                                            <a href="#" class="players-table-panel__button">
+                                                <img src="images/match/messages.svg">
+                                            </a>
+                                        </div>
+                                    </div><!--players-table__data-->
+                                </div><!--toggle-body js-toggle-body-->
+                            </div><!--players-table__row js-toggle-->
+
+                            <!--left player 2-->
+                            <div class="players-table__row activate-panel players-table__row_match js-toggle">
+                                <div class="players-table__col players-table__nick players-table__nick_match players-table__col_match  toggle-title js-toggle-title">                            
+                                    <span class="players-table__position">2</span>                                    
+                                    <span class="players-table__ava players-table__ava_match"><img src="images/match/ava2.png" alt=""></span>
+                                    <span class="players-table__name">Kaiya Carder</span>
+                                </div>
+                                <div class="toggle-body toggle-body_match js-toggle-body">
+                                    <div class="players-table__data">
+                                        <div class="players-table__col players-table__col_match">
+                                            <span class="only-mobile">Убийства:</span> 
+                                            <span>11</span>
+                                        </div>
+                                        <div class="players-table__col players-table__col_match">
+                                            <span class="only-mobile">Смерти:</span> 10
+                                        </div>
+                                        <div class="players-table__col players-table__col_match">
+                                            <span class="only-mobile">Aссисты:</span> 3
+                                        </div>
+                                        <div class="players-table__col players-table__col_match">
+                                            <span class="only-mobile">Рейтинг:</span> 
+                                            <span class="players-table__rating_match-up">7.68</span>
+                                        </div>
+                                        <div class="players-table-panel">
+                                            <a href="#" class="players-table-panel__button">
+                                                <img src="images/match/add_user.svg">
+                                            </a>
+                                            <a href="#" class="players-table-panel__button">
+                                                <img src="images/match/messages.svg">
+                                            </a>
+                                        </div>
+                                    </div><!--players-table__data-->
+                                </div><!--toggle-body js-toggle-body-->
+                            </div><!--players-table__row js-toggle-->
+
+                            <!--left player 3-->
+                            <div class="players-table__row activate-panel players-table__row_match js-toggle">
+                                <div class="players-table__col players-table__nick players-table__nick_match players-table__col_match  toggle-title js-toggle-title">                            
+                                    <span class="players-table__position">3</span>                                    
+                                    <span class="players-table__ava players-table__ava_match online"><img src="images/match/ava3.png" alt=""></span>
+                                    <span class="players-table__name">Maria Westervelt</span>
+                                </div>
+                                <div class="toggle-body toggle-body_match js-toggle-body">
+                                    <div class="players-table__data">
+                                        <div class="players-table__col players-table__col_match">
+                                            <span class="only-mobile">Убийства:</span> 
+                                            <span>20</span>
+                                        </div>
+                                        <div class="players-table__col players-table__col_match">
+                                            <span class="only-mobile">Смерти:</span> 12
+                                        </div>
+                                        <div class="players-table__col players-table__col_match">
+                                            <span class="only-mobile">Асисты:</span> 5
+                                        </div>
+                                        <div class="players-table__col players-table__col_match">
+                                            <span class="only-mobile">Рейтинг:</span>
+                                            <span class="players-table__rating_match-up">9.02</span>
+                                        </div>
+                                        <div class="players-table-panel">
+                                            <a href="#" class="players-table-panel__button">
+                                                <img src="images/match/add_user.svg">
+                                            </a>
+                                            <a href="#" class="players-table-panel__button">
+                                                <img src="images/match/messages.svg">
+                                            </a>
+                                        </div>
+                                    </div><!--players-table__data-->
+                                </div><!--toggle-body js-toggle-body-->
+                            </div><!--players-table__row js-toggle-->
+
+                            <!--left player 4-->
+                            <div class="players-table__row activate-panel players-table__row_match js-toggle">
+                                <div class="players-table__col players-table__nick players-table__nick_match players-table__col_match  toggle-title js-toggle-title">                            
+                                    <span class="players-table__position">4</span>                                    
+                                    <span class="players-table__ava players-table__ava_match"><img src="images/match/ava4.png" alt=""></span>
+                                    <span class="players-table__name">Abram Saris</span>
+                                </div>
+                                <div class="toggle-body toggle-body_match js-toggle-body">
+                                    <div class="players-table__data">
+                                        <div class="players-table__col players-table__col_match">
+                                            <span class="only-mobile">Убийства:</span> 
+                                            <span>20</span>
+                                        </div>
+                                        <div class="players-table__col players-table__col_match">
+                                            <span class="only-mobile">Смерти:</span> 10
+                                        </div>
+                                        <div class="players-table__col players-table__col_match">
+                                            <span class="only-mobile">Ассисты:</span> 5
+                                        </div>
+                                        <div class="players-table__col players-table__col_match">
+                                            <span class="only-mobile">Рейтинг:</span>
+                                            <span class="players-table__rating_match-up">9.54</span>
+                                        </div>
+                                        <div class="players-table-panel">
+                                            <a href="#" class="players-table-panel__button">
+                                                <img src="images/match/add_user.svg">
+                                            </a>
+                                            <a href="#" class="players-table-panel__button">
+                                                <img src="images/match/messages.svg">
+                                            </a>
+                                        </div>
+                                    </div><!--players-table__data-->
+                                </div><!--toggle-body js-toggle-body-->
+                            </div><!--players-table__row js-toggle-->
+
+                            <!--left player 5-->
+                            <div class="players-table__row activate-panel players-table__row_match js-toggle">
+                                <div class="players-table__col players-table__nick players-table__nick_match players-table__col_match  toggle-title js-toggle-title">                            
+                                    <span class="players-table__position">5</span>                                    
+                                    <span class="players-table__ava players-table__ava_match"><img src="images/match/ava5.png" alt=""></span>
+                                    <span class="players-table__name">James Dokidis</span>
+                                </div>
+                                <div class="toggle-body toggle-body_match js-toggle-body">
+                                    <div class="players-table__data">
+                                        <div class="players-table__col players-table__col_match">
+                                            <span class="only-mobile">Убийства:</span> 
+                                            <span>19</span>
+                                        </div>
+                                        <div class="players-table__col players-table__col_match">
+                                            <span class="only-mobile">Смерти</span> 6
+                                        </div>
+                                        <div class="players-table__col players-table__col_match">
+                                            <span class="only-mobile">Ассисты</span> 1
+                                        </div>
+                                        <div class="players-table__col players-table__col_match">
+                                            <span class="only-mobile">Рейтинг:</span> 
+                                            <span class="players-table__rating_match-up">10.61</span>
+                                        </div>
+                                        <div class="players-table-panel">
+                                            <a href="#" class="players-table-panel__button">
+                                                <img src="images/match/add_user.svg">
+                                            </a>
+                                            <a href="#" class="players-table-panel__button">
+                                                <img src="images/match/messages.svg">
+                                            </a>
+                                        </div>
+                                    </div><!--players-table__data-->
+                                </div><!--toggle-body js-toggle-body-->
+                            </div><!--players-table__row js-toggle-->
+                        </div><!--players-table-->
+                    </div>
+
+                    <div class="match-results__col">
+                        <div class="players-table players-table_match">
+                            <div class="players-table__row players-table__row_match players-table__row_header">
+                                <div class="players-table__col players-table__nick players-table__nick_match-title players-table__col_match players-table__col_match-title">
+                                    Игрок
+                                </div>
+                                <div class="toggle-body toggle-body_match">
+                                    <div class="players-table__data">
+                                        <div class="players-table__col players-table__col_match players-table__col_match-title">
+                                            Убийства
+                                        </div>
+                                        <div class="players-table__col players-table__col_match players-table__col_match-title">
+                                            Смерти
+                                        </div>
+                                        <div class="players-table__col players-table__col_match players-table__col_match-title">
+                                            Ассисты
+                                        </div>    
+                                        <div class="players-table__col players-table__col_match players-table__col_match-title">
+                                            Рейтинг
+                                        </div>                                    
+                                    </div><!--players-table__data-->
+                                </div>
+                            </div>
+                            <div class="players-table__row activate-panel players-table__row_match js-toggle">
+                                <div class="players-table__col players-table__nick players-table__nick_match players-table__col_match  toggle-title js-toggle-title">                            
+                                    <span class="players-table__position"><img src="images/match/first_place.svg"></span>                                    
+                                    <span class="players-table__ava players-table__ava_match online"><img src="images/match/ava6.png" alt=""></span>
+                                    <span class="players-table__name">Jaylon Calzoni</span>
+                                </div>
+                                <div class="toggle-body toggle-body_match js-toggle-body">
+                                    <div class="players-table__data">
+                                        <div class="players-table__col players-table__col_match">
+                                            <span class="only-mobile">Убийства:</span> 
+                                            <span>11</span>
+                                        </div>
+                                        <div class="players-table__col players-table__col_match">
+                                            <span class="only-mobile">Смерти:</span> 18
+                                        </div>
+                                        <div class="players-table__col players-table__col_match">
+                                            <span class="only-mobile">Ассисты:</span> 3
+                                        </div>
+                                        <div class="players-table__col players-table__col_match">
+                                            <span class="only-mobile">Рейтинг:</span> 
+                                            <span class="players-table__rating_match-down">8.4</span>
+                                        </div>
+                                        <div class="players-table-panel">
+                                            <a href="#" class="players-table-panel__button">
+                                                <img src="images/match/add_user.svg">
+                                            </a>
+                                            <a href="#" class="players-table-panel__button">
+                                                <img src="images/match/messages.svg">
+                                            </a>
+                                        </div>
+                                    </div><!--players-table__data-->
+                                </div><!--toggle-body js-toggle-body-->
+                            </div><!--players-table__row js-toggle-->
+
+                            <!--right player 2-->
+                            <div class="players-table__row activate-panel players-table__row_match js-toggle">
+                                <div class="players-table__col players-table__nick players-table__nick_match players-table__col_match  toggle-title js-toggle-title">                            
+                                    <span class="players-table__position">2</span>                                    
+                                    <span class="players-table__ava players-table__ava_match"><img src="images/match/ava7.png" alt=""></span>
+                                    <span class="players-table__name">Maria Bergson</span>
+                                </div>
+                                <div class="toggle-body toggle-body_match js-toggle-body">
+                                    <div class="players-table__data">
+                                        <div class="players-table__col players-table__col_match">
+                                            <span class="only-mobile">Убийства:</span> 
+                                            <span>4</span>
+                                        </div>
+                                        <div class="players-table__col players-table__col_match">
+                                            <span class="only-mobile">Смерти:</span> 16
+                                        </div>
+                                        <div class="players-table__col players-table__col_match">
+                                            <span class="only-mobile">Ассисты:</span> 1
+                                        </div>
+                                        <div class="players-table__col players-table__col_match">
+                                            <span class="only-mobile">Рейтинг:</span> 
+                                            <span class="players-table__rating_match-down">11.04</span>
+                                        </div>
+                                        <div class="players-table-panel">
+                                            <a href="#" class="players-table-panel__button">
+                                                <img src="images/match/add_user.svg">
+                                            </a>
+                                            <a href="#" class="players-table-panel__button">
+                                                <img src="images/match/messages.svg">
+                                            </a>
+                                        </div>
+                                    </div><!--players-table__data-->
+                                </div><!--toggle-body js-toggle-body-->
+                            </div><!--players-table__row js-toggle-->
+
+                            <!--right player 3-->
+                            <div class="players-table__row activate-panel players-table__row_match js-toggle">
+                                <div class="players-table__col players-table__nick players-table__nick_match players-table__col_match  toggle-title js-toggle-title">                            
+                                    <span class="players-table__position">3</span>                                    
+                                    <span class="players-table__ava players-table__ava_match online"><img src="images/match/ava8.png" alt=""></span>
+                                    <span class="players-table__name">Martin Dorwart</span>
+                                </div>
+                                <div class="toggle-body toggle-body_match js-toggle-body">
+                                    <div class="players-table__data">
+                                        <div class="players-table__col players-table__col_match">
+                                            <span class="only-mobile">Убийства:</span> 
+                                            <span>11</span>
+                                        </div>
+                                        <div class="players-table__col players-table__col_match">
+                                            <span class="only-mobile">Смерти:</span> 18
+                                        </div>
+                                        <div class="players-table__col players-table__col_match">
+                                            <span class="only-mobile">Ассисты:</span> 3
+                                        </div>
+                                        <div class="players-table__col players-table__col_match">
+                                            <span class="only-mobile">Рейтинг:</span> 
+                                            <span class="players-table__rating_match-down">8.8</span>
+                                        </div>
+                                        <div class="players-table-panel">
+                                            <a href="#" class="players-table-panel__button">
+                                                <img src="images/match/add_user.svg">
+                                            </a>
+                                            <a href="#" class="players-table-panel__button">
+                                                <img src="images/match/messages.svg">
+                                            </a>
+                                        </div>
+                                    </div><!--players-table__data-->
+                                </div><!--toggle-body js-toggle-body-->
+                            </div><!--players-table__row js-toggle-->
+
+                            <!--right player 4-->
+                            <div class="players-table__row activate-panel players-table__row_match js-toggle">
+                                <div class="players-table__col players-table__nick players-table__nick_match players-table__col_match  toggle-title js-toggle-title">                            
+                                    <span class="players-table__position">4</span>                                    
+                                    <span class="players-table__ava players-table__ava_match"><img src="images/match/ava9.png" alt=""></span>
+                                    <span class="players-table__name">Hanna Press</span>
+                                </div>
+                                <div class="toggle-body toggle-body_match js-toggle-body">
+                                    <div class="players-table__data">
+                                        <div class="players-table__col players-table__col_match">
+                                            <span class="only-mobile">Убийства:</span> 
+                                            <span>15</span>
+                                        </div>
+                                        <div class="players-table__col players-table__col_match">
+                                            <span class="only-mobile">Смерти:</span> 17
+                                        </div>
+                                        <div class="players-table__col players-table__col_match">
+                                            <span class="only-mobile">Ассисты:</span> 1
+                                        </div>
+                                        <div class="players-table__col players-table__col_match">
+                                            <span class="only-mobile">Рейтинг:</span> 
+                                            <span class="players-table__rating_match-down">11.2</span>
+                                        </div>
+                                        <div class="players-table-panel">
+                                            <a href="#" class="players-table-panel__button">
+                                                <img src="images/match/add_user.svg">
+                                            </a>
+                                            <a href="#" class="players-table-panel__button">
+                                                <img src="images/match/messages.svg">
+                                            </a>
+                                        </div>
+                                    </div><!--players-table__data-->
+                                </div><!--toggle-body js-toggle-body-->
+                            </div><!--players-table__row js-toggle-->
+
+                            <!--right player 5-->
+                            <div class="players-table__row activate-panel players-table__row_match js-toggle">
+                                <div class="players-table__col players-table__nick players-table__nick_match players-table__col_match  toggle-title js-toggle-title">                            
+                                    <span class="players-table__position">5</span>                                    
+                                    <span class="players-table__ava players-table__ava_match"><img src="images/match/ava10.png" alt=""></span>
+                                    <span class="players-table__name">Leo Septimus</span>
+                                </div>
+                                <div class="toggle-body toggle-body_match js-toggle-body">
+                                    <div class="players-table__data">
+                                        <div class="players-table__col players-table__col_match">
+                                            <span class="only-mobile">Убийства:</span> 
+                                            <span>5</span>
+                                        </div>
+                                        <div class="players-table__col players-table__col_match">
+                                            <span class="only-mobile">Смерти:</span> 18
+                                        </div>
+                                        <div class="players-table__col players-table__col_match">
+                                            <span class="only-mobile">Ассисты:</span> 1
+                                        </div>
+                                        <div class="players-table__col players-table__col_match">
+                                            <span class="only-mobile">Рейтинг:</span> 
+                                            <span class="players-table__rating_match-down">11.2</span>
+                                        </div>
+                                        <div class="players-table-panel">
+                                            <a href="#" class="players-table-panel__button">
+                                                <img src="images/match/add_user.svg">
+                                            </a>
+                                            <a href="#" class="players-table-panel__button">
+                                                <img src="images/match/messages.svg">
+                                            </a>
+                                        </div>
+                                    </div><!--players-table__data-->
+                                </div><!--toggle-body js-toggle-body-->
+                            </div><!--players-table__row js-toggle-->
+                        </div><!--players-table-->
+                    </div>
+                </div>
+                <div class="match-results">
+                    <div class="match-results__col">
+                        <div class="players-table players-table_match">
+                            <div class="players-table__row players-table__row_match players-table__row_header">
+                                <div class="players-table__col players-table__nick players-table__nick_match-title players-table__col_match players-table__col_match-title">
+                                    Игрок
+                                </div>
+                                <div class="toggle-body toggle-body_match">
+                                    <div class="players-table__data">
+                                        <div class="players-table__col players-table__col_match players-table__col_match-title">
+                                            Матчи
+                                        </div>
+                                        <div class="players-table__col players-table__col_match players-table__col_match-title">
+                                            Побед
+                                        </div>
+                                        <div class="players-table__col players-table__col_match players-table__col_match-title">
+                                            Рейтинг
+                                        </div>                                       
+                                    </div><!--players-table__data-->
+                                </div>
+                            </div>
+                            <div class="players-table__row activate-panel players-table__row_match js-toggle">
+                                <div class="players-table__col players-table__nick players-table__nick_match players-table__col_match  toggle-title js-toggle-title">                            
+                                    <span class="players-table__position"><img src="images/match/first_place.svg"></span>                                    
+                                    <span class="players-table__ava players-table__ava_match online"><img src="images/match/ava1.png" alt=""></span>
+                                    <span class="players-table__name">Nolan Torff</span>
+                                </div>
+                                <div class="toggle-body toggle-body_match js-toggle-body">
+                                    <div class="players-table__data">
+                                        <div class="players-table__col players-table__col_match">
+                                            <span class="only-mobile">Матчи:</span> 
+                                            <span>18</span>
+                                        </div>
+                                        <div class="players-table__col players-table__col_match">
+                                            <span class="only-mobile">Побед:</span> 10
+                                        </div>
+                                        <div class="players-table__col players-table__col_match">
+                                            <span class="only-mobile">Рейтинг:</span> 1063
+                                        </div>
+                                        <div class="players-table-panel">
+                                            <a href="#" class="players-table-panel__button">
+                                                <img src="images/match/add_user.svg">
+                                            </a>
+                                            <a href="#" class="players-table-panel__button">
+                                                <img src="images/match/messages.svg">
+                                            </a>
+                                        </div>
+                                    </div><!--players-table__data-->
+                                </div><!--toggle-body js-toggle-body-->
+                            </div><!--players-table__row js-toggle-->
+
+                            <!--left player 2-->
+                            <div class="players-table__row activate-panel players-table__row_match js-toggle">
+                                <div class="players-table__col players-table__nick players-table__nick_match players-table__col_match  toggle-title js-toggle-title">                            
+                                    <span class="players-table__position">2</span>                                    
+                                    <span class="players-table__ava players-table__ava_match"><img src="images/match/ava2.png" alt=""></span>
+                                    <span class="players-table__name">Kaiya Carder</span>
+                                </div>
+                                <div class="toggle-body toggle-body_match js-toggle-body">
+                                    <div class="players-table__data">
+                                        <div class="players-table__col players-table__col_match">
+                                            <span class="only-mobile">Матчи:</span> 
+                                            <span>11</span>
+                                        </div>
+                                        <div class="players-table__col players-table__col_match">
+                                            <span class="only-mobile">Побед:</span> 10
+                                        </div>
+                                        <div class="players-table__col players-table__col_match">
+                                            <span class="only-mobile">Рейтинг:</span> 988
+                                        </div>
+                                        <div class="players-table-panel">
+                                            <a href="#" class="players-table-panel__button">
+                                                <img src="images/match/add_user.svg">
+                                            </a>
+                                            <a href="#" class="players-table-panel__button">
+                                                <img src="images/match/messages.svg">
+                                            </a>
+                                        </div>
+                                    </div><!--players-table__data-->
+                                </div><!--toggle-body js-toggle-body-->
+                            </div><!--players-table__row js-toggle-->
+
+                            <!--left player 3-->
+                            <div class="players-table__row activate-panel players-table__row_match js-toggle">
+                                <div class="players-table__col players-table__nick players-table__nick_match players-table__col_match  toggle-title js-toggle-title">                            
+                                    <span class="players-table__position">3</span>                                    
+                                    <span class="players-table__ava players-table__ava_match online"><img src="images/match/ava3.png" alt=""></span>
+                                    <span class="players-table__name">Maria Westervelt</span>
+                                </div>
+                                <div class="toggle-body toggle-body_match js-toggle-body">
+                                    <div class="players-table__data">
+                                        <div class="players-table__col players-table__col_match">
+                                            <span class="only-mobile">Матчи:</span> 
+                                            <span>20</span>
+                                        </div>
+                                        <div class="players-table__col players-table__col_match">
+                                            <span class="only-mobile">Побед:</span> 12
+                                        </div>
+                                        <div class="players-table__col players-table__col_match">
+                                            <span class="only-mobile">Рейтинг:</span> 1291
+                                        </div>
+                                        <div class="players-table-panel">
+                                            <a href="#" class="players-table-panel__button">
+                                                <img src="images/match/add_user.svg">
+                                            </a>
+                                            <a href="#" class="players-table-panel__button">
+                                                <img src="images/match/messages.svg">
+                                            </a>
+                                        </div>
+                                    </div><!--players-table__data-->
+                                </div><!--toggle-body js-toggle-body-->
+                            </div><!--players-table__row js-toggle-->
+
+                            <!--left player 4-->
+                            <div class="players-table__row activate-panel players-table__row_match js-toggle">
+                                <div class="players-table__col players-table__nick players-table__nick_match players-table__col_match  toggle-title js-toggle-title">                            
+                                    <span class="players-table__position">4</span>                                    
+                                    <span class="players-table__ava players-table__ava_match"><img src="images/match/ava4.png" alt=""></span>
+                                    <span class="players-table__name">Nolan Torff</span>
+                                </div>
+                                <div class="toggle-body toggle-body_match js-toggle-body">
+                                    <div class="players-table__data">
+                                        <div class="players-table__col players-table__col_match">
+                                            <span class="only-mobile">Матчи:</span> 
+                                            <span>20</span>
+                                        </div>
+                                        <div class="players-table__col players-table__col_match">
+                                            <span class="only-mobile">Побед:</span> 10
+                                        </div>
+                                        <div class="players-table__col players-table__col_match">
+                                            <span class="only-mobile">Рейтинг:</span> 1022
+                                        </div>
+                                        <div class="players-table-panel">
+                                            <a href="#" class="players-table-panel__button">
+                                                <img src="images/match/add_user.svg">
+                                            </a>
+                                            <a href="#" class="players-table-panel__button">
+                                                <img src="images/match/messages.svg">
+                                            </a>
+                                        </div>
+                                    </div><!--players-table__data-->
+                                </div><!--toggle-body js-toggle-body-->
+                            </div><!--players-table__row js-toggle-->
+
+                            <!--left player 5-->
+                            <div class="players-table__row activate-panel players-table__row_match js-toggle">
+                                <div class="players-table__col players-table__nick players-table__nick_match players-table__col_match  toggle-title js-toggle-title">                            
+                                    <span class="players-table__position">5</span>                                    
+                                    <span class="players-table__ava players-table__ava_match"><img src="images/match/ava5.png" alt=""></span>
+                                    <span class="players-table__name">James Dokidis</span>
+                                </div>
+                                <div class="toggle-body toggle-body_match js-toggle-body">
+                                    <div class="players-table__data">
+                                        <div class="players-table__col players-table__col_match">
+                                            <span class="only-mobile">Матчи:</span> 
+                                            <span>19</span>
+                                        </div>
+                                        <div class="players-table__col players-table__col_match">
+                                            <span class="only-mobile">Побед:</span> 6
+                                        </div>
+                                        <div class="players-table__col players-table__col_match">
+                                            <span class="only-mobile">Рейтинг:</span> 876
+                                        </div>
+                                        <div class="players-table-panel">
+                                            <a href="#" class="players-table-panel__button">
+                                                <img src="images/match/add_user.svg">
+                                            </a>
+                                            <a href="#" class="players-table-panel__button">
+                                                <img src="images/match/messages.svg">
+                                            </a>
+                                        </div>
+                                    </div><!--players-table__data-->
+                                </div><!--toggle-body js-toggle-body-->
+                            </div><!--players-table__row js-toggle-->
+                        </div><!--players-table-->
+                    </div>
+
+                    <div class="match-results__col">
+                        <div class="players-table players-table_match">
+                            <div class="players-table__row players-table__row_match players-table__row_header">
+                                <div class="players-table__col players-table__nick players-table__nick_match-title players-table__col_match players-table__col_match-title">
+                                    Игрок
+                                </div>
+                                <div class="toggle-body toggle-body_match">
+                                    <div class="players-table__data">
+                                        <div class="players-table__col players-table__col_match players-table__col_match-title">
+                                            Матчи
+                                        </div>
+                                        <div class="players-table__col players-table__col_match players-table__col_match-title">
+                                            Побед
+                                        </div>
+                                        <div class="players-table__col players-table__col_match players-table__col_match-title">
+                                            Рейтинг
+                                        </div>                                       
+                                    </div><!--players-table__data-->
+                                </div>
+                            </div>
+                            <div class="players-table__row activate-panel players-table__row_match js-toggle">
+                                <div class="players-table__col players-table__nick players-table__nick_match players-table__col_match  toggle-title js-toggle-title">                            
+                                    <span class="players-table__position"><img src="images/match/first_place.svg"></span>                                    
+                                    <span class="players-table__ava players-table__ava_match online"><img src="images/match/ava6.png" alt=""></span>
+                                    <span class="players-table__name">Jaylon Calzoni</span>
+                                </div>
+                                <div class="toggle-body toggle-body_match js-toggle-body">
+                                    <div class="players-table__data">
+                                        <div class="players-table__col players-table__col_match">
+                                            <span class="only-mobile">Матчи:</span> 
+                                            <span>18</span>
+                                        </div>
+                                        <div class="players-table__col players-table__col_match">
+                                            <span class="only-mobile">Побед:</span> 10
+                                        </div>
+                                        <div class="players-table__col players-table__col_match">
+                                            <span class="only-mobile">Рейтинг:</span> 1063
+                                        </div>
+                                        <div class="players-table-panel">
+                                            <a href="#" class="players-table-panel__button">
+                                                <img src="images/match/add_user.svg">
+                                            </a>
+                                            <a href="#" class="players-table-panel__button">
+                                                <img src="images/match/messages.svg">
+                                            </a>
+                                        </div>
+                                    </div><!--players-table__data-->
+                                </div><!--toggle-body js-toggle-body-->
+                            </div><!--players-table__row js-toggle-->
+
+                            <!--right player 2-->
+                            <div class="players-table__row activate-panel players-table__row_match js-toggle">
+                                <div class="players-table__col players-table__nick players-table__nick_match players-table__col_match  toggle-title js-toggle-title">                            
+                                    <span class="players-table__position">2</span>                                    
+                                    <span class="players-table__ava players-table__ava_match"><img src="images/match/ava7.png" alt=""></span>
+                                    <span class="players-table__name">Maria Bergson</span>
+                                </div>
+                                <div class="toggle-body toggle-body_match js-toggle-body">
+                                    <div class="players-table__data">
+                                        <div class="players-table__col players-table__col_match">
+                                            <span class="only-mobile">Матчи:</span> 
+                                            <span>11</span>
+                                        </div>
+                                        <div class="players-table__col players-table__col_match">
+                                            <span class="only-mobile">Побед:</span> 10
+                                        </div>
+                                        <div class="players-table__col players-table__col_match">
+                                            <span class="only-mobile">Рейтинг:</span> 988
+                                        </div>
+                                        <div class="players-table-panel">
+                                            <a href="#" class="players-table-panel__button">
+                                                <img src="images/match/add_user.svg">
+                                            </a>
+                                            <a href="#" class="players-table-panel__button">
+                                                <img src="images/match/messages.svg">
+                                            </a>
+                                        </div>
+                                    </div><!--players-table__data-->
+                                </div><!--toggle-body js-toggle-body-->
+                            </div><!--players-table__row js-toggle-->
+
+                            <!--right player 3-->
+                            <div class="players-table__row activate-panel players-table__row_match js-toggle">
+                                <div class="players-table__col players-table__nick players-table__nick_match players-table__col_match  toggle-title js-toggle-title">                            
+                                    <span class="players-table__position">3</span>                                    
+                                    <span class="players-table__ava players-table__ava_match online"><img src="images/match/ava8.png" alt=""></span>
+                                    <span class="players-table__name">Martin Dorwart</span>
+                                </div>
+                                <div class="toggle-body toggle-body_match js-toggle-body">
+                                    <div class="players-table__data">
+                                        <div class="players-table__col players-table__col_match">
+                                            <span class="only-mobile">Матчи:</span> 
+                                            <span>20</span>
+                                        </div>
+                                        <div class="players-table__col players-table__col_match">
+                                            <span class="only-mobile">Побед:</span> 12
+                                        </div>
+                                        <div class="players-table__col players-table__col_match">
+                                            <span class="only-mobile">Рейтинг:</span> 1291
+                                        </div>
+                                        <div class="players-table-panel">
+                                            <a href="#" class="players-table-panel__button">
+                                                <img src="images/match/add_user.svg">
+                                            </a>
+                                            <a href="#" class="players-table-panel__button">
+                                                <img src="images/match/messages.svg">
+                                            </a>
+                                        </div>
+                                    </div><!--players-table__data-->
+                                </div><!--toggle-body js-toggle-body-->
+                            </div><!--players-table__row js-toggle-->
+
+                            <!--right player 4-->
+                            <div class="players-table__row activate-panel players-table__row_match js-toggle">
+                                <div class="players-table__col players-table__nick players-table__nick_match players-table__col_match  toggle-title js-toggle-title">                            
+                                    <span class="players-table__position">4</span>                                    
+                                    <span class="players-table__ava players-table__ava_match"><img src="images/match/ava9.png" alt=""></span>
+                                    <span class="players-table__name">Hanna Press</span>
+                                </div>
+                                <div class="toggle-body toggle-body_match js-toggle-body">
+                                    <div class="players-table__data">
+                                        <div class="players-table__col players-table__col_match">
+                                            <span class="only-mobile">Матчи:</span> 
+                                            <span>20</span>
+                                        </div>
+                                        <div class="players-table__col players-table__col_match">
+                                            <span class="only-mobile">Побед:</span> 10
+                                        </div>
+                                        <div class="players-table__col players-table__col_match">
+                                            <span class="only-mobile">Рейтинг:</span> 1022
+                                        </div>
+                                        <div class="players-table-panel">
+                                            <a href="#" class="players-table-panel__button">
+                                                <img src="images/match/add_user.svg">
+                                            </a>
+                                            <a href="#" class="players-table-panel__button">
+                                                <img src="images/match/messages.svg">
+                                            </a>
+                                        </div>
+                                    </div><!--players-table__data-->
+                                </div><!--toggle-body js-toggle-body-->
+                            </div><!--players-table__row js-toggle-->
+
+                            <!--right player 5-->
+                            <div class="players-table__row activate-panel players-table__row_match js-toggle">
+                                <div class="players-table__col players-table__nick players-table__nick_match players-table__col_match  toggle-title js-toggle-title">                            
+                                    <span class="players-table__position">5</span>                                    
+                                    <span class="players-table__ava players-table__ava_match"><img src="images/match/ava10.png" alt=""></span>
+                                    <span class="players-table__name">Leo Septimus</span>
+                                </div>
+                                <div class="toggle-body toggle-body_match js-toggle-body">
+                                    <div class="players-table__data">
+                                        <div class="players-table__col players-table__col_match">
+                                            <span class="only-mobile">Матчи:</span> 
+                                            <span>19</span>
+                                        </div>
+                                        <div class="players-table__col players-table__col_match">
+                                            <span class="only-mobile">Побед:</span> 6
+                                        </div>
+                                        <div class="players-table__col players-table__col_match">
+                                            <span class="only-mobile">Рейтинг:</span> 876
+                                        </div>
+                                        <div class="players-table-panel">
+                                            <a href="#" class="players-table-panel__button">
+                                                <img src="images/match/add_user.svg">
+                                            </a>
+                                            <a href="#" class="players-table-panel__button">
+                                                <img src="images/match/messages.svg">
+                                            </a>
+                                        </div>
+                                    </div><!--players-table__data-->
+                                </div><!--toggle-body js-toggle-body-->
+                            </div><!--players-table__row js-toggle-->
+                        </div><!--players-table-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!--container-->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="scripts/mobile-toggle.js"></script>
+</body>
+</html>
