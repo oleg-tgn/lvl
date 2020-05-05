@@ -9,7 +9,8 @@
 
     <title>Chat Template</title>
 
-    <link rel="stylesheet" href="styles/chat.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/chat.css">
 </head>
 <body>
     <header class="header-temp"></header>
@@ -236,9 +237,9 @@
                     </a>
                 </div>
             </div>
+            <div class="chat-wrapper__messages-col">
             <div class="chat-messages">
                 <div class="chat-tabs__header chat-tabs__header_messages">
-                    <!--TODO: нужна векторная иконка-->
                     <span class="chat-tabs__icon">
                         <img src="images/icons/message.svg" alt="">
                     </span>
@@ -369,26 +370,10 @@
                     </form>
                 </div>
             </div><!--.chat-messages-->
+            </div><!--chat-wrapper__messages-col-->
         </div>
     </div>
     </div>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            //The first argument are the elements to which the plugin shall be initialized
-            //The second argument has to be at least a empty object or a object with your desired options
-            OverlayScrollbars(document.getElementsByClassName('js-scrollbar'), { 
-                 scrollbars : {
-                     autoHide : "leave"
-                 }
-            }); 
-            /*по умолчанию прокручиваем до последнего сообщения в диалоге*/
-            messages = OverlayScrollbars(document.getElementsByClassName('js-scrollbar-bottom'), { 
-                 scrollbars : {
-                     autoHide : "leave"
-                 }
-            }); 
-            //messages.scroll([ 0, "100%" ], 0);
-        });
-    </script>
+    <script type="text/javascript" src="scripts/scrollbar-init.js"></script>
 </body>
 </html>

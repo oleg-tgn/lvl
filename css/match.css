@@ -469,6 +469,20 @@
   }
 }
 
+.match-results__col_messages-col {
+  width: 65%;
+}
+
+@media (max-width: 767.98px) {
+  .match-results__col_messages-col {
+    width: 100%;
+  }
+}
+
+.match-results__col_35 {
+  width: 35%;
+}
+
 .match-maps {
   display: -webkit-box;
   display: -ms-flexbox;

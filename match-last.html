@@ -14,6 +14,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>
     <!--End Custom Scrollbar-->
 
+    <link type="text/css" href="scrollbar/OverlayScrollbars.css" rel="stylesheet"/>
+    <script type="text/javascript" src="scrollbar/OverlayScrollbars.js"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
 
@@ -22,6 +25,7 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/player-table.css">
     <link rel="stylesheet" href="css/match.css">
+    <link rel="stylesheet" href="css/chat.css">
 </head>
 <body>
     <header class="header-temp"></header>
@@ -668,11 +672,125 @@
                         </div><!--players-table-->
                     </div>
                 </div>
+
+                <div class="match-results">
+                    <div class="match-results__col match-results__col_messages-col">
+                        <div class="chat-messages chat-messages_match">                            
+                            <div class="chat-messages__form chat-messages__form_match">
+                                <div class="chat-avatar">
+                                    <img src="images/match/chat/ava1.png">
+                                </div>
+                                <form action="#" class="chat-form chat-form_match">
+                                    <div class="chat-form__row chat-form__row_match">
+                                        <textarea rows="1" 
+                                            placeholder="Введите сообщение..." 
+                                            type="text" 
+                                            class="chat-form__textarea js-scrollbar"
+                                        ></textarea>
+                                        <button class="chat-form__button"></button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="chat-messages__content chat-messages__content_match js-scrollbar-bottom">
+                                <div class="chat-row chat-row_match">
+                                    <div class="chat-avatar">
+                                        <img src="images/match/chat/ava2.png">
+                                    </div>
+                                    <div class="chat-bubble chat-bubble_match">
+                                        <div class="chat-bubble__header chat-bubble__header_match">
+                                            <span class="chat-bubble__name_match">XXXTentacionXXX</span>  23:49 ･ 14.04.2020
+                                        </div>
+                                        <div class="chat-bubble__text chat-bubble__text_match">
+                                            Гегельянство рефлектирует интеллигибельный гравитационный парадокс. Апостериори, дедуктивный метод осмысленно оспособляет онтологический гравитационный парадокс, не учитывая мнения авторитетов. Гений естественно порождает и обеспечивает субъективный мир. Согласно предыдущему, заблуждение амбивалентно. Аджива, по определению, вырождена.
+                                        </div>
+                                    </div>
+                                </div><!--.chat-row chat-row_match-->
+
+                                <div class="chat-row chat-row_own chat-row_match chat-row_match-own">
+                                    <div class="chat-avatar chat-avatar_own">
+                                        <img src="images/match/chat/ava3.png">
+                                    </div>
+                                    <div class="chat-bubble chat-bubble_own chat-bubble_match">
+                                        <div class="chat-bubble__header chat-bubble__header_match">
+                                            <span class="chat-bubble__name_match">XXXTentacionXXX</span>  22:01 ･ 14.04.2020
+                                        </div>
+                                        <div class="chat-bubble__text chat-bubble__text_match">
+                                            Дедуктивный метод непредвзято индуцирует интеллект. 
+                                        </div>
+                                    </div>
+                                </div><!--.chat-row chat-row_own chat-row_match chat-row_match-own-->
+                                
+                                <div class="chat-row chat-row_match">
+                                    <div class="chat-avatar">
+                                        <img src="images/match/chat/ava4.png">
+                                    </div>
+                                    <div class="chat-bubble chat-bubble_match">
+                                        <div class="chat-bubble__header chat-bubble__header_match">
+                                            <span class="chat-bubble__name_match">Gustavo Frieng</span>  19:22 ･ 14.04.2020
+                                        </div>
+                                        <div class="chat-bubble__text chat-bubble__text_match">
+                                            Наряду с этим ощущение мира подрывает сенсибельный язык образов. Гедонизм рефлектирует структурализм. Моцзы, Сюнъцзы и другие считали, что смысл жизни индуцирует примитивный закон исключённого третьего.
+                                        </div>
+                                    </div>
+                                </div><!--.chat-row chat-row_match-->
+
+                                <div class="chat-row chat-row_match">
+                                    <div class="chat-avatar">
+                                        <img src="images/match/chat/ava2.png">
+                                    </div>
+                                    <div class="chat-bubble chat-bubble_match">
+                                        <div class="chat-bubble__header chat-bubble__header_match">
+                                            <span class="chat-bubble__name_match">XXXTentacionXXX</span>  23:49 ･ 14.04.2020
+                                        </div>
+                                        <div class="chat-bubble__text chat-bubble__text_match">
+                                            Гегельянство рефлектирует интеллигибельный гравитационный парадокс. Апостериори, дедуктивный метод осмысленно оспособляет онтологический гравитационный парадокс, не учитывая мнения авторитетов. Гений естественно порождает и обеспечивает субъективный мир. Согласно предыдущему, заблуждение амбивалентно. Аджива, по определению, вырождена.
+                                        </div>
+                                    </div>
+                                </div><!--.chat-row chat-row_match-->
+
+                                <div class="chat-row chat-row_own chat-row_match chat-row_match-own">
+                                    <div class="chat-avatar chat-avatar_own">
+                                        <img src="images/match/chat/ava3.png">
+                                    </div>
+                                    <div class="chat-bubble chat-bubble_own chat-bubble_match">
+                                        <div class="chat-bubble__header chat-bubble__header_match">
+                                            <span class="chat-bubble__name_match">XXXTentacionXXX</span>  22:01 ･ 14.04.2020
+                                        </div>
+                                        <div class="chat-bubble__text chat-bubble__text_match">
+                                            Дедуктивный метод непредвзято индуцирует интеллект. 
+                                        </div>
+                                    </div>
+                                </div><!--.chat-row chat-row_own chat-row_match chat-row_match-own-->
+                                
+                                <div class="chat-row chat-row_match">
+                                    <div class="chat-avatar">
+                                        <img src="images/match/chat/ava4.png">
+                                    </div>
+                                    <div class="chat-bubble chat-bubble_match">
+                                        <div class="chat-bubble__header chat-bubble__header_match">
+                                            <span class="chat-bubble__name_match">Gustavo Frieng</span>  19:22 ･ 14.04.2020
+                                        </div>
+                                        <div class="chat-bubble__text chat-bubble__text_match">
+                                            Наряду с этим ощущение мира подрывает сенсибельный язык образов. Гедонизм рефлектирует структурализм. Моцзы, Сюнъцзы и другие считали, что смысл жизни индуцирует примитивный закон исключённого третьего.
+                                        </div>
+                                    </div>
+                                </div><!--.chat-row chat-row_match-->
+
+                            </div><!--.chat-messages__content-->
+                            
+                        </div><!--.chat-messages-->
+                    </div>
+
+                    <div class="match-results__col match-results__col_35">
+
+                    </div>
+                </div>
             </div>
         </div>
     </div><!--container-->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="scripts/mobile-toggle.js"></script>
+    <script src="scripts/scrollbar-init.js"></script>
 </body>
 </html>
