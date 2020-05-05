@@ -1,0 +1,12 @@
+@media (min-width: 1025px) {
+  .only-mobile {
+    display: none !important;
+  }
+}
+
+@media (max-width: 1024px) {
+  .only-mobile {
+    display: inline-block;
+  }
+}
+/*# sourceMappingURL=media.css.map */

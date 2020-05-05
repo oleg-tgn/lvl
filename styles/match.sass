@@ -16,7 +16,7 @@
 
   @media #{$mobile}
     background-size: 250%
-    padding: 0 10px
+    padding: 0 10px 20px
     background-position-x: center
 
 .match-header
@@ -360,4 +360,41 @@
   &__label
     position: relative
     z-index: 4
+
+.match-lastplay
+  &__title
+    font-weight: bold
+    font-size: 18px
+    color: #ffffff
+    margin-bottom: 10px
+
+    @media #{$mobile}
+      margin: 30px 0 10px
+      font-size: 15px
   
+  &__logo
+    width: 20px
+    margin: 0 5px
+
+  &__score
+    margin: 0 20px
+    color: #FDB81C
+
+    @media #{$mobileAndTablet}
+      margin: 0 10px
+
+    @media #{$smallMobile}
+      margin: 0 5px
+
+  &__team
+    white-space: nowrap
+    text-overflow: ellipsis
+    overflow: hidden  
+    display: inline-block
+
+    @media #{$tablet}
+      max-width: 80px
+
+    @media #{$mobile}
+      max-width: 80px
+      

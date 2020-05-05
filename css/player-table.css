@@ -80,6 +80,36 @@
   padding: 0 20px;
 }
 
+.players-table__row_lastplay {
+  padding: 0 20px;
+}
+
+@media (min-width: 1025px) {
+  .players-table__row_lastplay {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media (max-width: 1024px) {
+  .players-table__row_lastplay {
+    -webkit-box-orient: unset;
+    -webkit-box-direction: unset;
+        -ms-flex-direction: unset;
+            flex-direction: unset;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 374.98px) {
+  .players-table__row_lastplay {
+    font-size: 12px;
+    padding: 0 10px;
+  }
+}
+
 .players-table__col {
   width: 100px;
   padding: 20px 0;
@@ -96,7 +126,7 @@
 
 @media (max-width: 1024px) {
   .players-table__col {
-    width: 100% !important;
+    width: 100%;
     -webkit-box-pack: left;
         -ms-flex-pack: left;
             justify-content: left;
@@ -155,6 +185,80 @@
   width: 134px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+
+.players-table__col_lastplay-time, .players-table__col_lastplay-date {
+  color: #8A939E;
+  width: 60px;
+}
+
+@media (max-width: 1024px) {
+  .players-table__col_lastplay-time, .players-table__col_lastplay-date {
+    width: 50%;
+  }
+}
+
+.players-table__col_lastplay-time {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+@media (max-width: 1024px) {
+  .players-table__col_lastplay-time {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+}
+
+.players-table__col_lastplay-date {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+@media (max-width: 1024px) {
+  .players-table__col_lastplay-date {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+}
+
+.players-table__col_lastplay-score {
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+}
+
+@media (min-width: 1025px) {
+  .players-table__col_lastplay-score {
+    width: 320px;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1400px) {
+  .players-table__col_lastplay-score {
+    width: 270px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .players-table__col_lastplay-score {
+    width: 100%;
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .players-table__col_lastplay-score {
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+  }
 }
 
 .players-table .toggle-body {
@@ -346,6 +450,7 @@
 
 @media (max-width: 1024px) {
   .players-table__nick_match {
+    width: 100%;
     height: 59px;
   }
 }
