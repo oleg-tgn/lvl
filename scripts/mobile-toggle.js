@@ -19,8 +19,12 @@ $(document).ready(function() {
     hideContentOnMobile();
 
     $(window).resize(function() {
-        console.log("resize");
         hideContentOnMobile();
+    });
+
+    $('.js-faq-toggle-title').on('click',function() {
+        $(this).parents('.js-faq-toggle').find('.js-faq-toggle-body').slideToggle(300);
+        $(this).toggleClass('open');
     });
  });
 
